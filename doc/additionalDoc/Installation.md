@@ -1,4 +1,4 @@
-# Installation {#installation_detailed}
+# Installation {#c_installation_detailed}
 
 \section installation_detailed_from_binaries Installation from binary packages
 
@@ -9,31 +9,32 @@ the apt repository provided by LAAS. It is based on the NetBSD package system.
 
 1. Setting a source.list file 
 Robotpkg has two apt repository: a main repository and a work-in-progress repository:
-```bash
-sudo tee /etc/apt/sources.list.d/robotpkg.list <<EOF
-deb [arch=amd64] http://robotpkg.openrobots.org/wip/packages/debian/pub $(lsb_release -cs) robotpkg
-deb [arch=amd64] http://robotpkg.openrobots.org/packages/debian/pub $(lsb_release -cs) robotpkg
-EOF
-```
 
-2. Register the robotpkg authentication key 
-```bash
-curl http://robotpkg.openrobots.org/packages/debian/robotpkg.key | sudo apt-key add -
-```
+    sudo tee /etc/apt/sources.list.d/robotpkg.list <<EOF
+    deb [arch=amd64] http://robotpkg.openrobots.org/wip/packages/debian/pub $(lsb_release -cs) robotpkg
+    deb [arch=amd64] http://robotpkg.openrobots.org/packages/debian/pub $(lsb_release -cs) robotpkg
+    EOF
+
+
+2. Register the robotpkg authentication key:
+
+        curl http://robotpkg.openrobots.org/packages/debian/robotpkg.key | sudo apt-key add -
+
+
 3. Update the list of available packages 
 Please follow the instructions given <a href="http://robotpkg.openrobots.org/debian.html">here</a> to access the package repository.
-```bash
-sudo apt update
-```
-4. Install the package sot-core-v3 you can use
-```bash
-sudo apt install robotpkg-sot-core-v3
-```
 
-To get all packages available to simulate the TALOS robot available at LAAS:
-```bash
-sudo apt install robotpkg-talos-dev
-```
+    sudo apt update
+
+4. Install the package sot-core-v3 you can use
+
+        sudo apt install robotpkg-sot-core-v3
+
+
+    To get all packages available to simulate the TALOS robot available at LAAS:
+
+        sudo apt install robotpkg-talos-dev
+
 
 \subsection installation_robotpkg_status Status of the robotpkg binaries
 
@@ -45,9 +46,39 @@ You can find a more readable entry in \ref status_robotpkg_binaries.
 
 \section installation_from_source Installing from source 
 
+\subsection installation_from_source_old_school Installing each package manually
+
+1. Create an environment:
+
+        mkdir -p sot_ws/src sot_ws/install sot_ws/build
+        cd sot_ws/src
+    
+2. For a package (let us say dynamic-graph):
+
+        git clone git@github.com:stack-of-tasks/dynamic-graph.git --recursive
+        cd ../build
+        mkdir dynamic-graph
+        cmake  -DCMAKE_INSTALL_PREFIX=$PWD/../../install ../../src/dynamic-graph
+        
+3. To build (with 8 threads):
+   
+       make -j 8
+
+4. To install:
+    
+        make install
+        
+5. To run unit tests:
+   
+        make test
+        
+6. To make documentation:
+
+        make doc
+        
 \subsection installation_from_source_catkin_build Installing from catkin (for development/experimental)
 
-
+The complete and detailed information can be found in \ref memo_catkin_tools
 
 \subsection installation_from_source_robotpkg Installing from robotpkg (to prepare an environment)
 
@@ -60,7 +91,6 @@ You will also have to install the wip (work in progress) part of robotpkg. The i
 
 To compile and install the package <b>sot-core-v3</b> then you can type:
 
-```
-cd robotpkg/wip/sot-core-v3
-make install
-```
+    cd robotpkg/wip/sot-core-v3
+    make install
+
