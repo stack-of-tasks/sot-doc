@@ -15,15 +15,17 @@ in \ref controllers_information . We strongly recommend that you read it if you 
 \section InstallIntro Installation
 
 It is recommended to install the Stack-Of-Tasks from binaries. This is strongly recommended if you are working on one of the robot currently supported: TALOS or Tiago.
+More information are given in the \ref installation_detailed page.
 
 \subsection subsecInstallIntroBin Installing from binaries
 
 We recommend to install from binaries using the robotpkg apt repository. It is planned to have some SoT core packages integrated in ROS Melodic around June 2020.
+More information are available in the \ref installation_detailed_from_binaries section.
 
 \subsection subsecInstallIntroSrc Installing from sources
 
 This installation provides more flexibility but needs some good computer science skills.
-
+More information are available in the \ref installation_from_source section.
 
 \section OrganizationIntro Organization
 
