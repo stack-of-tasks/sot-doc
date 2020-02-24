@@ -1,4 +1,4 @@
-# Controllers formulation {#controllers_information}
+# Controllers formulation {#b_controllers_information}
 \section NecessaryConditions Necessary constraints
 \subsection SubSecDynamicModeling Dynamic modeling of a free-floating multi-body system
 The dynamic model of a free-floating multi-body system can be written this way:
