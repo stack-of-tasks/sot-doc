@@ -1,0 +1,17 @@
+<package format="2">
+  <name>sot-doc</name>
+  <version>0.0.1</version>
+  <description>
+    Stack-Of-Tasks documentation
+  </description>
+  <maintainer email="ostasse@laas.fr">Olivier Stasse</maintainer>
+  <license>BSD</license>
+
+  <url>http://github.com/stack-of-tasks/sot-doc</url>
+  <author>Olivier Stasse</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <doc_depend>doxygen</doc_depend>
+
+</package>
