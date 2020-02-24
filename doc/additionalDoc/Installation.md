@@ -94,3 +94,7 @@ To compile and install the package <b>sot-core-v3</b> then you can type:
     cd robotpkg/wip/sot-core-v3
     make install
 
+# Setting up your environment {#d_setting_up_environment}
+
+To setup the environment variables you can use the following script [setup-opt-testrobotpkgarg.sh](https://github.com/stack-of-tasks/sot-doc/bash/setup-opt-testrobotpkgarg.sh)
+

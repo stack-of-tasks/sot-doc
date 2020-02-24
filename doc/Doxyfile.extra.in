@@ -291,11 +291,14 @@ WARN_LOGFILE           = @CMAKE_BINARY_DIR@/doc/doxygen.log
 # directories like "/usr/src/myproject". Separate the files or directories
 # with spaces.
 
-INPUT                 = @CMAKE_SOURCE_DIR@/doc/additionalDoc/Overview.md \
+INPUT                 = @CMAKE_SOURCE_DIR@/doc/additionalDoc/MainPage.md \
+                        @CMAKE_SOURCE_DIR@/doc/additionalDoc/Overview.md \
                         @CMAKE_SOURCE_DIR@/doc/additionalDoc/ControllersFormulation.md \
                         @CMAKE_SOURCE_DIR@/doc/additionalDoc/Installation.md \
                         @CMAKE_SOURCE_DIR@/doc/additionalDoc/StateRobotpkgBinaries.md \
                         @CMAKE_SOURCE_DIR@/doc/additionalDoc/CatkinBuildTools.md \
+                        @CMAKE_SOURCE_DIR@/doc/additionalDoc/Citing.md \
+                        @CMAKE_SOURCE_DIR@/bash/setup-opt-testrobotpkgarg.sh 
                         
 # The RECURSIVE tag can be used to turn specify whether or not subdirectories
 # should be searched for input files as well. Possible values are YES and NO.
