@@ -9,6 +9,7 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
+    - name: Extract submodules
       run: git submodule init
       run: git submodule update
     - name: configure
