@@ -35,6 +35,7 @@ Please follow the instructions given <a href="http://robotpkg.openrobots.org/deb
 
         sudo apt install robotpkg-talos-dev
 
+5. Once the desired package is installed make sure to set up your environment variables \ref d_setting_up_environment
 
 \subsection installation_robotpkg_status Status of the robotpkg binaries
 
@@ -45,6 +46,28 @@ But you have all the packages from robotpkg listed which does not make it very r
 You can find a more readable entry in \ref status_robotpkg_binaries.
 
 \section installation_from_source Installing from source 
+
+In order to develop inside the Stack-Of-Tasks you may want to install some robot packages such as 
+the [TALOS robot simulation environment](http://wiki.ros.org/Robots/TALOS/Tutorials/Installation/Simulation) or the [one provided for the TIAGO robot](http://wiki.ros.org/Robots/TIAGo/Tutorials/Installation/TiagoSimulation).
+You also need to install the dependencies of each package. They are listed and integrated in robotpkg, and our
+current advise is to install it through robotpkg.
+
+\subsection installation_from_source_robotpkg Installing from robotpkg (to prepare an environment)
+
+Please do not use this source installation methodology for development. Rather it is useful to setup a frozen development environment
+similarly to the install directory of a ROS catkin workspace, or to prepare a docker file.
+This environment will not evolve as you developped on top of it because you are fully in control.
+
+Please follow the instructions given [here](http://robotpkg.openrobots.org/install.html) to get the package repositories.
+
+You will also have to install the wip (work in progress) part of robotpkg. The installation procedure is described
+[here](http://robotpkg.openrobots.org/robotpkg-wip.html).
+
+To compile and install the talos simulation environment, it is best to use the package <b>talos-simulation</b> then you can type:
+
+    cd robotpkg/wip/talos-simulation
+    make install
+    
 
 \subsection installation_from_source_old_school Installing each package manually
 
@@ -80,21 +103,36 @@ You can find a more readable entry in \ref status_robotpkg_binaries.
 
 The complete and detailed information can be found in \ref memo_catkin_tools
 
-\subsection installation_from_source_robotpkg Installing from robotpkg (to prepare an environment)
-
-The source installation can be realized through robotpkg but be aware that this not advised for development.
-
-Please follow the instructions given [here](http://robotpkg.openrobots.org/install.html) to get the package repositories.
-
-You will also have to install the wip (work in progress) part of robotpkg. The installation procedure is described
-[here](http://robotpkg.openrobots.org/robotpkg-wip.html).
-
-To compile and install the package <b>sot-core-v3</b> then you can type:
-
-    cd robotpkg/wip/sot-core-v3
-    make install
 
 # Setting up your environment {#d_setting_up_environment}
 
-To setup the environment variables you can use the following script [setup-opt-testrobotpkgarg.sh](https://github.com/stack-of-tasks/sot-doc/bash/setup-opt-testrobotpkgarg.sh)
+To setup the environment variables you can use the script
+[setup-opt-testrobotpkgarg.sh](https://github.com/stack-of-tasks/sot-doc/blob/master/bash/setup-opt-testrobotpkgarg.sh)
+
+This will set the following environment variables according to the argument:
+ * CMAKE_PREFIX_PATH
+ * LD_LIBRARY_PATH
+ * PATH
+ * PKG_CONFIG_PATH
+ * PYTHON_PATH 
+ * ROBOTPKG_BASE 
+ * ROS_PACKAGE_PATH 
+ 
+To use it with the binary packages installed in /opt/openrobots:
+
+    source setup-opt-testrobotpkgarg.sh -p /opt/openrobots -r
+
+Once you typed this command you can check that the previous variables have the string "/opt/openrobots".
+The order set the priority.
+
+The directory /opt/openrobots will have the highest priority with respect to all the precited variables.
+This equivalent to workspace chaining in ROS.
+
+It is recommended to handle this with aliases in your .bashrc file.
+You can for instance add the following line to your .bash_aliases
+
+    alias sop="source setup-opt-testrobotpkgarg.sh -p /opt/openrobots -r"
+
+
+
 
