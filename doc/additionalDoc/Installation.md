@@ -35,7 +35,10 @@ Please follow the instructions given <a href="http://robotpkg.openrobots.org/deb
 
         sudo apt install robotpkg-talos-dev
 
-5. Once the desired package is installed make sure to set up your environment variables \ref d_setting_up_environment
+5. Now all has been installed in the directory /opt/openrobots.
+   You need to make sure that your environment variables are set correctly by following \ref d_setting_up_environment
+   
+6. You can now try the tutorials.
 
 \subsection installation_robotpkg_status Status of the robotpkg binaries
 
