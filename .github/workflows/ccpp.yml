@@ -9,8 +9,9 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
-    - name: Extract submodules
+    - name: Init submodules
       run: git submodule init
+    - name: Update submodules
       run: git submodule update
     - name: configure
       run: cmake .
