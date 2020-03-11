@@ -1,6 +1,6 @@
 # Using catkin tools and vcs for the SoT {#memo_catkin_tools}
 
-\section memo_catkin_tools_ontro Introduction
+\section memo_catkin_tools_intro Introduction
 This memo explains how to handle super build (set of packages) with catkin tools.
 catkin tools should not confused with catkin_make. They can be installed independently from ROS.
 
@@ -100,9 +100,17 @@ In the src directory of the workspace
 
     vcs status -quiet
 
+\subsection memo_catkin_tools_vcs_status Updating the repos
+In the root directory of the worspace
 
-\section memo_catkin_tools_compiling Compiling and testing the packages 
-\subsection memo_catkin_tools_settings Setting the cmake args
+    vcs pull
+
+This will pull the current branch from its upstream remote server.
+
+
+\section memo_catkin_tools_compiling Compiling and testing the packages (catkin)
+
+\subsection memo_catkin_tools_compiling_settings Setting the cmake args
 For instance we want to force the system to be in debug mode
 and to set some variables we can use the following command:
 
@@ -122,7 +130,8 @@ A more involved example is the following:
     catkin config ${catkin_config_args} --
 
 
-\subsection memo_catkin_tools_compiling Compiling
+\subsection memo_catkin_tools_compiling_compiling Compiling
+
 \subsubsection memo_catkin_tools_compiling_all Compiling everything
 
     catkin build
@@ -142,7 +151,12 @@ package:
 
 
     catkin build dynamic-graph-python --no-deps
-    
+
+\subsubsection memo_catkin_tools_compiling_a_pkg_doc Generating the documentation
+For instance the following command is generating the documentation for the sot-core
+package:
+
+    catkin build sot-core --no-deps --make-args doc
 
 \subsection memo_catkin_tools_clean_all Clean all the build part
 
