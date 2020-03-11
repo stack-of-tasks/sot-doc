@@ -50,15 +50,17 @@
     <name>memo_catkin_tools</name>
     <title>Using catkin tools and vcs for the SoT</title>
     <filename>memo_catkin_tools</filename>
-    <docanchor file="memo_catkin_tools" title="Introduction">memo_catkin_tools_ontro</docanchor>
+    <docanchor file="memo_catkin_tools" title="Introduction">memo_catkin_tools_intro</docanchor>
     <docanchor file="memo_catkin_tools" title="Handling the repositories (VCS)">memo_catkin_tools_vcs</docanchor>
     <docanchor file="memo_catkin_tools" title="Checking out the SoT infra-structure">memo_catkin_tools_vcs_checkingout</docanchor>
     <docanchor file="memo_catkin_tools" title="Getting the current status of the repos">memo_catkin_tools_vcs_status</docanchor>
-    <docanchor file="memo_catkin_tools" title="Compiling and testing the packages">memo_catkin_tools_compiling</docanchor>
-    <docanchor file="memo_catkin_tools" title="Setting the cmake args">memo_catkin_tools_settings</docanchor>
+    <docanchor file="memo_catkin_tools" title="Compiling and testing the packages (catkin)">memo_catkin_tools_compiling</docanchor>
+    <docanchor file="memo_catkin_tools" title="Setting the cmake args">memo_catkin_tools_compiling_settings</docanchor>
+    <docanchor file="memo_catkin_tools" title="Compiling">memo_catkin_tools_compiling_compiling</docanchor>
     <docanchor file="memo_catkin_tools" title="Compiling everything">memo_catkin_tools_compiling_all</docanchor>
     <docanchor file="memo_catkin_tools" title="Compiling a specific package with its dependencies">memo_catkin_tools_compiling_a_pkg</docanchor>
     <docanchor file="memo_catkin_tools" title="Compiling a specific package without its dependencies">memo_catkin_tools_compiling_a_pkg_nodeps</docanchor>
+    <docanchor file="memo_catkin_tools" title="Generating the documentation">memo_catkin_tools_compiling_a_pkg_doc</docanchor>
     <docanchor file="memo_catkin_tools" title="Clean all the build part">memo_catkin_tools_clean_all</docanchor>
     <docanchor file="memo_catkin_tools" title="Running tests">memo_catkin_tools_run_tests</docanchor>
     <docanchor file="memo_catkin_tools" title="Computing coverage">memo_catkin_tools_compute_coverage</docanchor>

@@ -42,15 +42,18 @@ var NAVTREE =
       [ "Robots packages", "status_robotpkg_binaries.html#status_rpkg_binaries_robots", null ]
     ] ],
     [ "Using catkin tools and vcs for the SoT", "memo_catkin_tools.html", [
-      [ "Introduction", "memo_catkin_tools.html#memo_catkin_tools_ontro", null ],
+      [ "Introduction", "memo_catkin_tools.html#memo_catkin_tools_intro", null ],
       [ "Handling the repositories (VCS)", "memo_catkin_tools.html#memo_catkin_tools_vcs", [
         [ "Checking out the SoT infra-structure", "memo_catkin_tools.html#memo_catkin_tools_vcs_checkingout", null ],
-        [ "Getting the current status of the repos", "memo_catkin_tools.html#memo_catkin_tools_vcs_status", null ],
-        [ "Compiling and testing the packages", "memo_catkin_tools.html#memo_catkin_tools_compiling", null ],
-        [ "Setting the cmake args", "memo_catkin_tools.html#memo_catkin_tools_settings", [
+        [ "Getting the current status of the repos", "memo_catkin_tools.html#memo_catkin_tools_vcs_status", null ]
+      ] ],
+      [ "Compiling and testing the packages (catkin)", "memo_catkin_tools.html#memo_catkin_tools_compiling", [
+        [ "Setting the cmake args", "memo_catkin_tools.html#memo_catkin_tools_compiling_settings", null ],
+        [ "Compiling", "memo_catkin_tools.html#memo_catkin_tools_compiling_compiling", [
           [ "Compiling everything", "memo_catkin_tools.html#memo_catkin_tools_compiling_all", null ],
           [ "Compiling a specific package with its dependencies", "memo_catkin_tools.html#memo_catkin_tools_compiling_a_pkg", null ],
-          [ "Compiling a specific package without its dependencies", "memo_catkin_tools.html#memo_catkin_tools_compiling_a_pkg_nodeps", null ]
+          [ "Compiling a specific package without its dependencies", "memo_catkin_tools.html#memo_catkin_tools_compiling_a_pkg_nodeps", null ],
+          [ "Generating the documentation", "memo_catkin_tools.html#memo_catkin_tools_compiling_a_pkg_doc", null ]
         ] ],
         [ "Clean all the build part", "memo_catkin_tools.html#memo_catkin_tools_clean_all", null ],
         [ "Running tests", "memo_catkin_tools.html#memo_catkin_tools_run_tests", null ],

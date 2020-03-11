@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('memo_catkin_tools.html','');});
 <div class="title">Using catkin tools and vcs for the SoT </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="memo_catkin_tools_ontro"></a>
+<div class="textblock"><h1><a class="anchor" id="memo_catkin_tools_intro"></a>
 Introduction</h1>
 <p>This memo explains how to handle super build (set of packages) with catkin tools. catkin tools should not confused with catkin_make. They can be installed independently from ROS.</p>
 <h1><a class="anchor" id="memo_catkin_tools_vcs"></a>
@@ -184,9 +184,13 @@ Checking out the SoT infra-structure</h2>
 </pre><h2><a class="anchor" id="memo_catkin_tools_vcs_status"></a>
 Getting the current status of the repos</h2>
 <p>In the src directory of the workspace </p><pre class="fragment">vcs status -quiet
-</pre><h1><a class="anchor" id="memo_catkin_tools_compiling"></a>
-Compiling and testing the packages</h1>
-<h2><a class="anchor" id="memo_catkin_tools_settings"></a>
+</pre><h2><a class="anchor" id="memo_catkin_tools_vcs_status"></a>
+Getting the current status of the repos</h2>
+<p>In the root directory of the worspace </p><pre class="fragment">vcs pull
+</pre><p>This will pull the current branch from its upstream remote server.</p>
+<h1><a class="anchor" id="memo_catkin_tools_compiling"></a>
+Compiling and testing the packages (catkin)</h1>
+<h2><a class="anchor" id="memo_catkin_tools_compiling_settings"></a>
 Setting the cmake args</h2>
 <p>For instance we want to force the system to be in debug mode and to set some variables we can use the following command: </p><pre class="fragment">catkin config --install --cmake-args -DCMAKE_BUILD_TYPE=DEBUG
 </pre><p>It forces the package to be installed in the install folder, and forces all the CMake aware packages to be compiled in DEBUG mode.</p>
@@ -197,8 +201,8 @@ local_cmake_args="${local_cmake_args} -DSETUPTOOLS_DEB_LAYOUT:BOOL=OFF"
 catkin_config_args="--install -w $HOME/devel-src/sot_bionic_ws"
 catkin_config_args="${catking_config_args} ${local_cmake_args}"
 catkin config ${catkin_config_args} --
-</pre><h2><a class="anchor" id="memo_catkin_tools_compiling"></a>
-Compiling and testing the packages</h2>
+</pre><h2><a class="anchor" id="memo_catkin_tools_compiling_compiling"></a>
+Compiling</h2>
 <h3><a class="anchor" id="memo_catkin_tools_compiling_all"></a>
 Compiling everything</h3>
 <pre class="fragment">catkin build
@@ -210,6 +214,9 @@ Compiling a specific package with its dependencies</h3>
 Compiling a specific package without its dependencies</h3>
 <p>For instance the following command is compiling the dynamic-graph-python package:</p>
 <pre class="fragment">catkin build dynamic-graph-python --no-deps
+</pre><h3><a class="anchor" id="memo_catkin_tools_compiling_a_pkg_doc"></a>
+Generating the documentation</h3>
+<p>For instance the following command is generating the documentation for the sot-core package: </p><pre class="fragment">catkin build sot-core --no-deps --make-args doc
 </pre><h2><a class="anchor" id="memo_catkin_tools_clean_all"></a>
 Clean all the build part</h2>
 <pre class="fragment">catkin clean 
@@ -230,7 +237,7 @@ Computing coverage</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Feb 25 2020 08:57:59 for sot-doc by
+    <li class="footer">Generated on Wed Mar 11 2020 22:29:46 for sot-doc by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>
