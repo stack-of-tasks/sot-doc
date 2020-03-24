@@ -9,7 +9,11 @@
     <docanchor file="page_overview" title="Installing from binaries">subsecInstallIntroBin</docanchor>
     <docanchor file="page_overview" title="Installing from sources">subsecInstallIntroSrc</docanchor>
     <docanchor file="page_overview" title="Organization">OrganizationIntro</docanchor>
-    <docanchor file="page_overview" title="Overview">a_overview</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>Installation_Generalities</name>
+    <title>Installation</title>
+    <filename>Installation_Generalities</filename>
   </compound>
   <compound kind="page">
     <name>b_controllers_information</name>
@@ -26,7 +30,7 @@
   </compound>
   <compound kind="page">
     <name>c_installation_detailed</name>
-    <title>Installation</title>
+    <title>Installation - Quick start</title>
     <filename>c_installation_detailed</filename>
     <docanchor file="c_installation_detailed" title="Installation from binary packages">installation_detailed_from_binaries</docanchor>
     <docanchor file="c_installation_detailed" title="Installing binaries - Quick start">installation_robotpkg</docanchor>
@@ -69,10 +73,5 @@
     <name>z_citing_the_robot</name>
     <title>Citing the SoT</title>
     <filename>z_citing_the_robot</filename>
-  </compound>
-  <compound kind="page">
-    <name>index</name>
-    <title></title>
-    <filename>index</filename>
   </compound>
 </tagfile>
