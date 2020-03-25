@@ -1,7 +1,7 @@
 repositories:
   others/robotpkg_helpers:
     type: git
-    url: https://github.com/stack-of-tasks/robotpkg_helpers.git
+    url: https://github.com/olivier-stasse/robotpkg_helpers.git
     version: master
   src/dynamic-graph:
     type: git
