@@ -23,7 +23,7 @@ Package name on github | Package name on robotpkg
 Package name on github | Package name on robotpkg
 -----------------------|-------------------------
 [dynamic_graph_bridge](https://github.com/stack-of-tasks/dynamic_graph_bridge) | [robotpkg-py-dynamic-graph-bridge](http://robotpkg.openrobots.org/rbulk/robotpkg-wip/wip/py-dynamic-graph-bridge-v3) |
-[roscontrol-sot](https://github.com/stack-of-tasks/roscontrol-sot) | [robotpkg-roscontrol-sot](http://robotpkg.openrobots.org/rbulk/robotpkg-wip/wip/roscontrol-sot/) |
+[roscontrol-sot](https://github.com/stack-of-tasks/roscontrol_sot) | [robotpkg-roscontrol-sot](http://robotpkg.openrobots.org/rbulk/robotpkg-wip/wip/roscontrol-sot/) |
 
 
 
