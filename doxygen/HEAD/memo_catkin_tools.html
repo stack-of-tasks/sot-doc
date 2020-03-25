@@ -104,7 +104,14 @@ $(document).ready(function(){initNavTree('memo_catkin_tools.html','');});
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="memo_catkin_tools_intro"></a>
 Introduction</h1>
-<p>This memo explains how to handle super build (set of packages) with catkin tools. catkin tools should not confused with catkin_make. They can be installed independently from ROS.</p>
+<p>This memo explains how to handle a super build (set of packages) workspace of the SoT with catkin tools. catkin tools should not confused with catkin_make. They can be installed independently from ROS.</p>
+<h2><a class="anchor" id="memo_catkin_tools_quick_start"></a>
+Quick start</h2>
+<p>If you do not have all the source dependencies please follow the steps given in <a class="el" href="memo_catkin_tools.html#memo_preparing_environment">Installing dependencies</a>.</p>
+<p>Once this is done, to create your SoT workspace: </p><pre class="fragment">mkdir sot_ws
+vcs import --recursive &lt; sot_talos.repos
+catkin build
+</pre><p>That's it.</p>
 <h1><a class="anchor" id="memo_catkin_tools_vcs"></a>
 Handling the repositories (VCS)</h1>
 <h2><a class="anchor" id="memo_catkin_tools_vcs_checkingout"></a>
@@ -113,72 +120,72 @@ Checking out the SoT infra-structure</h2>
 <p>The repositories for the SoT can be specified in a file sot_talos.repos as follows: </p><pre class="fragment">repositories:
     others/robotpkg_helpers:
         type: git
-        url: https://github.com/olivier-stasse/robotpkg_helpers.git
+        url: https://github.com/stack-of-tasks/robotpkg_helpers.git
         version: master
     src/dynamic-graph:
         type: git
         url: https://github.com/stack-of-tasks/dynamic-graph.git
-        version: cmake-export
+        version: master
     src/dynamic-graph-python:
         type: git
-        url: git@github.com:stack-of-tasks/dynamic-graph-python.git
-        version: cmake-export
+        url: https://github.com/stack-of-tasks/dynamic-graph-python.git
+        version: master
     src/dynamic_graph_bridge:
         type: git
         url: https://github.com/stack-of-tasks/dynamic_graph_bridge.git
-        version: cmake-export
+        version: master
     src/dynamic_graph_bridge_msgs:
         type: git
-        url: git@github.com:stack-of-tasks/dynamic_graph_bridge_msgs.git
+        url: https://github.com/stack-of-tasks/dynamic_graph_bridge_msgs.git
         version: master
     src/jrl-walkgen:
         type: git
-        url: git@github.com:stack-of-tasks/jrl-walkgen.git
-        version: cmake-export
+        url: https://github.com/stack-of-tasks/jrl-walkgen.git
+        version: master
     src/roscontrol_sot:
         type: git
-        url: git@github.com:stack-of-tasks/roscontrol_sot.git
-        version: cmake-export
+        url: https://github.com/stack-of-tasks/roscontrol_sot.git
+        version: master
     src/sot-core:
         type: git
         url: https://github.com/stack-of-tasks/sot-core.git
-        version: cmake-export
+        version: master
     src/sot-dynamic-pinocchio:
         type: git
-        url: git@github.com:stack-of-tasks/sot-dynamic-pinocchio.git
-        version: cmake-export
+        url: https://github.com/stack-of-tasks/sot-dynamic-pinocchio.git
+        version: master
     src/sot-pattern-generator:
         type: git
         url: https://github.com/stack-of-tasks/sot-pattern-generator.git
-        version: cmake-export
+        version: master
     src/sot-talos:
         type: git
         url: https://github.com/stack-of-tasks/sot-talos.git
-        version: cmake-export
+        version: master
     src/sot-talos-balance:
         type: git
-        url: git@gepgitlab.laas.fr:loco-3d/sot-talos-balance.git
-        version: cmake-export
+        url: https://github.com/loco-3d/sot-talos-balance.git
+        version: master
     src/sot-tools:
         type: git
         url: https://github.com/stack-of-tasks/sot-tools.git
-        version: cmake-export
+        version: master
     src/sot-torque-control:
         type: git
-        url: git@github.com:stack-of-tasks/sot-torque-control.git
-        version: cmake-export
+        url: https://github.com/stack-of-tasks/sot-torque-control.git
+        version: master
     src/talos_data:
         type: git
-        url: git@github.com:stack-of-tasks/talos_data.git
-        version: cmake-export
+        url: https://github.com/stack-of-tasks/talos_data.git
+        version: master
     src/talos_metapkg_ros_control_sot:
         type: git
         url: https://github.com/stack-of-tasks/talos_metapkg_roscontrol_sot.git
-        version: pal
+        version: master
     src/tsid:
         type: git
-        url: https://github.com/olivier-stasse/tsid.git
-        version: cmake-export
+        url: https://github.com/stack-of-tasks/tsid.git
+        version: master
 </pre><p>To import all the repositories: </p><pre class="fragment">vcs import --recursive &lt; sot_talos.repos
 </pre><p>You can create your own file by going in the src directory of your workspace, and then type: </p><pre class="fragment">vcs export --repos &gt; sot_talos.repos
 </pre><h2><a class="anchor" id="memo_catkin_tools_vcs_status"></a>
@@ -219,7 +226,7 @@ Generating the documentation</h3>
 <p>For instance the following command is generating the documentation for the sot-core package: </p><pre class="fragment">catkin build sot-core --no-deps --make-args doc
 </pre><h2><a class="anchor" id="memo_catkin_tools_clean_all"></a>
 Clean all the build part</h2>
-<pre class="fragment">catkin clean 
+<pre class="fragment">catkin clean
 </pre><h2><a class="anchor" id="memo_catkin_tools_run_tests"></a>
 Running tests</h2>
 <p>Example running the test programs of the package dynamic-graph-python in the workspace root directory:</p>
@@ -232,12 +239,40 @@ Computing coverage</h2>
 <pre class="fragment">catkin config --append --cmake-args -DCMAKE_CXX_FLAGS="--coverage" -DCMAKE_LD_FLAGS="--coverage"
 </pre><p>Then run the test: </p><pre class="fragment">catkin test dynamic-graph-python
 </pre><p>And in the workspace root directory you need to run: </p><pre class="fragment">gcovr -r . --html --html-details -o ./logs/coverage/index.html
-</pre><p>To get the output of the coverage: </p><pre class="fragment">firefox ./logs/coverage/index.html</pre> </div></div><!-- contents -->
+</pre><p>To get the output of the coverage: </p><pre class="fragment">firefox ./logs/coverage/index.html
+</pre><h1><a class="anchor" id="memo_preparing_environment"></a>
+Installing dependencies</h1>
+<p>They are several ways to install the dependencies of the SoT from sources in a target directory <code>target_dir</code> We gave here two methods to install the necessary software environment for the Stack-of-Tasks. To illustrate the process the Talos humanoid robot related packages are used.</p>
+<h2><a class="anchor" id="subsec_preparing_env_from_rpkg_only"></a>
+Robotpkg Only</h2>
+<p>You need to install the package management system robotpkg as detailed in <a class="el" href="c_installation_detailed.html#installation_from_source">Installing from source</a> . During the procedure make sure that prefix is set to <code>target_dir</code>.</p>
+<h2><a class="anchor" id="subsec_preparing_env_from_rpkg_helpers"></a>
+Robotpkg helpers repository</h2>
+<p>Clone the following repository : </p><pre class="fragment">git clone robotpkg_helpers https://github.com/olivier-stasse/robotpkg_helpers
+</pre><p>Modifies the following JSON file: </p><pre class="fragment">{"arch_dist_files": "arch_distfiles",
+ "archives": "archives",
+ "ramfs_mnt_pt": "openrobots",
+ "repo_robotpkg_wip": "https://git.openrobots.org/robots/robotpkg/robotpkg-wip.git",
+ "repo_robotpkg_main": "https://git.openrobots.org/robots/robotpkg.git",
+ "robotpkg_mng_root": "/integration_tests",
+ "robotpkg_mng_base": "/integration_tests/openrobots",
+ "robotpkg_mng_src": "/integration_tests/test-openrobots-src",
+ "rc_pkgs":
+ {},
+ "ssh_git_openrobots": false,
+ "targetpkgs": ["talos-dev"]
+}
+</pre><p>You can set the variable <code>robotpkg_mng_base</code> to <code>target_dir</code>. This where all the binaries, libraries, ros packages and documentation will be installed. The variable <code>robotpkg_mng_src</code> specifies where the robotpkg sources are stored.</p>
+<h2><a class="anchor" id="subsec_preparing_env_chaining_ws"></a>
+Chaining workspaces</h2>
+<p>To chain the workspace you can either follow this tutorial </p><pre class="fragment">http://wiki.ros.org/catkin/Tutorials/workspace_overlaying
+</pre><p>with the workspace where all the SoT packages are located, or make an alias calling the script <a href="https://github.com/stack-of-tasks/sot-doc/blob/master/bash/setup-opt-testrobotpkgarg.sh">setup-opt-testrobotpkgarg.sh</a> </p><pre class="fragment">source setup-opt-testrobotpkgarg.sh -p target_dir -r
+source setup-opt-testrobotpkgarg.sh -p sot_ws/install -r</pre> </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Mar 24 2020 16:42:50 for sot-doc by
+    <li class="footer">Generated on Wed Mar 25 2020 18:34:56 for sot-doc by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

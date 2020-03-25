@@ -19,7 +19,9 @@ var Installation_Generalities =
       [ "Robots packages", "status_robotpkg_binaries.html#status_rpkg_binaries_robots", null ]
     ] ],
     [ "Using catkin tools and vcs for the SoT", "memo_catkin_tools.html", [
-      [ "Introduction", "memo_catkin_tools.html#memo_catkin_tools_intro", null ],
+      [ "Introduction", "memo_catkin_tools.html#memo_catkin_tools_intro", [
+        [ "Quick start", "memo_catkin_tools.html#memo_catkin_tools_quick_start", null ]
+      ] ],
       [ "Handling the repositories (VCS)", "memo_catkin_tools.html#memo_catkin_tools_vcs", [
         [ "Checking out the SoT infra-structure", "memo_catkin_tools.html#memo_catkin_tools_vcs_checkingout", null ],
         [ "Getting the current status of the repos", "memo_catkin_tools.html#memo_catkin_tools_vcs_status", null ]
@@ -35,6 +37,11 @@ var Installation_Generalities =
         [ "Clean all the build part", "memo_catkin_tools.html#memo_catkin_tools_clean_all", null ],
         [ "Running tests", "memo_catkin_tools.html#memo_catkin_tools_run_tests", null ],
         [ "Computing coverage", "memo_catkin_tools.html#memo_catkin_tools_compute_coverage", null ]
+      ] ],
+      [ "Installing dependencies", "memo_catkin_tools.html#memo_preparing_environment", [
+        [ "Robotpkg Only", "memo_catkin_tools.html#subsec_preparing_env_from_rpkg_only", null ],
+        [ "Robotpkg helpers repository", "memo_catkin_tools.html#subsec_preparing_env_from_rpkg_helpers", null ],
+        [ "Chaining workspaces", "memo_catkin_tools.html#subsec_preparing_env_chaining_ws", null ]
       ] ]
     ] ]
 ];
