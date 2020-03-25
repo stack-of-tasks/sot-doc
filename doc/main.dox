@@ -1,0 +1,7 @@
+/** \page page_overview Overview
+*/
+/** \page Installation_Generalities Installation
+    - \subpage c_installation_detailed
+    - \subpage status_robotpkg_binaries
+    - \subpage memo_catkin_tools
+*/         
