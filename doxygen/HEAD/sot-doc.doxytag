@@ -16,6 +16,11 @@
     <filename>Installation_Generalities</filename>
   </compound>
   <compound kind="page">
+    <name>Usage_Examples</name>
+    <title>Usage examples</title>
+    <filename>Usage_Examples</filename>
+  </compound>
+  <compound kind="page">
     <name>b_controllers_information</name>
     <title>Controllers formulation</title>
     <filename>b_controllers_information</filename>
@@ -78,5 +83,11 @@
     <name>z_citing_the_robot</name>
     <title>Citing the SoT</title>
     <filename>z_citing_the_robot</filename>
+  </compound>
+  <compound kind="page">
+    <name>examples_using_sot</name>
+    <title>Examples of control infra structure using the SoT</title>
+    <filename>examples_using_sot</filename>
+    <docanchor file="examples_using_sot" title="Max-Planck-Institute">ex_usage_mpi</docanchor>
   </compound>
 </tagfile>

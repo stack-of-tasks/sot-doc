@@ -1,15 +1,16 @@
 var NAVTREEINDEX0 =
 {
 "Installation_Generalities.html":[1],
-"b_controllers_information.html":[2],
-"b_controllers_information.html#NecessaryConditions":[2,0],
-"b_controllers_information.html#SecFunctions":[2,1],
-"b_controllers_information.html#SubFuncFormulatingTasks":[2,1,0],
-"b_controllers_information.html#SubSecContactModels":[2,0,1],
-"b_controllers_information.html#SubSecDynamicModeling":[2,0,0],
-"b_controllers_information.html#SubsectionFormulatingInstantaneousControl":[2,1,1],
-"b_controllers_information.html#subsubImposingTaskDyn":[2,1,0,1],
-"b_controllers_information.html#subsubdef":[2,1,0,0],
+"Usage_Examples.html":[2],
+"b_controllers_information.html":[3],
+"b_controllers_information.html#NecessaryConditions":[3,0],
+"b_controllers_information.html#SecFunctions":[3,1],
+"b_controllers_information.html#SubFuncFormulatingTasks":[3,1,0],
+"b_controllers_information.html#SubSecContactModels":[3,0,1],
+"b_controllers_information.html#SubSecDynamicModeling":[3,0,0],
+"b_controllers_information.html#SubsectionFormulatingInstantaneousControl":[3,1,1],
+"b_controllers_information.html#subsubImposingTaskDyn":[3,1,0,1],
+"b_controllers_information.html#subsubdef":[3,1,0,0],
 "c_installation_detailed.html":[1,0],
 "c_installation_detailed.html#d_setting_up_environment":[1,0,2],
 "c_installation_detailed.html#installation_detailed_from_binaries":[1,0,0],
@@ -19,7 +20,9 @@ var NAVTREEINDEX0 =
 "c_installation_detailed.html#installation_from_source_robotpkg":[1,0,1,0],
 "c_installation_detailed.html#installation_robotpkg":[1,0,0,0],
 "c_installation_detailed.html#installation_robotpkg_status":[1,0,0,1],
-"citelist.html":[4],
+"citelist.html":[5],
+"examples_using_sot.html":[2,0],
+"examples_using_sot.html#ex_usage_mpi":[2,0,0],
 "index.html":[],
 "memo_catkin_tools.html":[1,2],
 "memo_catkin_tools.html#memo_catkin_tools_clean_all":[1,2,2,2],
@@ -53,5 +56,5 @@ var NAVTREEINDEX0 =
 "status_robotpkg_binaries.html#status_rpkg_binaries_robots":[1,1,3],
 "status_robotpkg_binaries.html#status_rpkg_binaries_ros":[1,1,2],
 "status_robotpkg_binaries.html#status_rpkg_binaries_walking":[1,1,1],
-"z_citing_the_robot.html":[3]
+"z_citing_the_robot.html":[4]
 };
