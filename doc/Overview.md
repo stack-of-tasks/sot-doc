@@ -1,7 +1,4 @@
-
-
 \page page_overview Overview
-# Overview {#a_overview}
 
 \section OverviewIntro What is the Stack-Of-Tasks ?
 
