@@ -1,69 +1,69 @@
 repositories:
-    others/robotpkg_helpers:
-        type: git
-        url: https://github.com/stack-of-tasks/robotpkg_helpers.git
-        version: master
-    src/dynamic-graph:
-        type: git
-        url: https://github.com/stack-of-tasks/dynamic-graph.git
-        version: master
-    src/dynamic-graph-python:
-        type: git
-        url: https://github.com/stack-of-tasks/dynamic-graph-python.git
-        version: master
-    src/dynamic_graph_bridge:
-        type: git
-        url: https://github.com/stack-of-tasks/dynamic_graph_bridge.git
-        version: master
-    src/dynamic_graph_bridge_msgs:
-        type: git
-        url: https://github.com/stack-of-tasks/dynamic_graph_bridge_msgs.git
-        version: master
-    src/jrl-walkgen:
-        type: git
-        url: https://github.com/stack-of-tasks/jrl-walkgen.git
-        version: master
-    src/roscontrol_sot:
-        type: git
-        url: https://github.com/stack-of-tasks/roscontrol_sot.git
-        version: master
-    src/sot-core:
-        type: git
-        url: https://github.com/stack-of-tasks/sot-core.git
-        version: master
-    src/sot-dynamic-pinocchio:
-        type: git
-        url: https://github.com/stack-of-tasks/sot-dynamic-pinocchio.git
-        version: master
-    src/sot-pattern-generator:
-        type: git
-        url: https://github.com/stack-of-tasks/sot-pattern-generator.git
-        version: master
-    src/sot-talos:
-        type: git
-        url: https://github.com/stack-of-tasks/sot-talos.git
-        version: master
-    src/sot-talos-balance:
-        type: git
-        url: https://github.com/loco-3d/sot-talos-balance.git
-        version: master
-    src/sot-tools:
-        type: git
-        url: https://github.com/stack-of-tasks/sot-tools.git
-        version: master
-    src/sot-torque-control:
-        type: git
-        url: https://github.com/stack-of-tasks/sot-torque-control.git
-        version: master
-    src/talos_data:
-        type: git
-        url: https://github.com/stack-of-tasks/talos_data.git
-        version: master
-    src/talos_metapkg_ros_control_sot:
-        type: git
-        url: https://github.com/stack-of-tasks/talos_metapkg_roscontrol_sot.git
-        version: master
-    src/tsid:
-        type: git
-        url: https://github.com/stack-of-tasks/tsid.git
-        version: master
+  others/robotpkg_helpers:
+    type: git
+    url: https://github.com/stack-of-tasks/robotpkg_helpers.git
+    version: master
+  src/dynamic-graph:
+    type: git
+    url: https://github.com/stack-of-tasks/dynamic-graph.git
+    version: master
+  src/dynamic-graph-python:
+    type: git
+    url: https://github.com/stack-of-tasks/dynamic-graph-python.git
+    version: master
+  src/dynamic_graph_bridge:
+    type: git
+    url: https://github.com/stack-of-tasks/dynamic_graph_bridge.git
+    version: master
+  src/dynamic_graph_bridge_msgs:
+    type: git
+    url: https://github.com/stack-of-tasks/dynamic_graph_bridge_msgs.git
+    version: master
+  src/jrl-walkgen:
+    type: git
+    url: https://github.com/stack-of-tasks/jrl-walkgen.git
+    version: master
+  src/roscontrol_sot:
+    type: git
+    url: https://github.com/stack-of-tasks/roscontrol_sot.git
+    version: master
+  src/sot-core:
+    type: git
+    url: https://github.com/stack-of-tasks/sot-core.git
+    version: master
+  src/sot-dynamic-pinocchio:
+    type: git
+    url: https://github.com/stack-of-tasks/sot-dynamic-pinocchio.git
+    version: master
+  src/sot-pattern-generator:
+    type: git
+    url: https://github.com/stack-of-tasks/sot-pattern-generator.git
+    version: master
+  src/sot-talos:
+    type: git
+    url: https://github.com/stack-of-tasks/sot-talos.git
+    version: master
+  src/sot-talos-balance:
+    type: git
+    url: https://github.com/loco-3d/sot-talos-balance.git
+    version: master
+  src/sot-tools:
+    type: git
+    url: https://github.com/stack-of-tasks/sot-tools.git
+    version: master
+  src/sot-torque-control:
+    type: git
+    url: https://github.com/stack-of-tasks/sot-torque-control.git
+    version: master
+  src/talos_data:
+    type: git
+    url: https://github.com/stack-of-tasks/talos_data.git
+    version: master
+  src/talos_metapkg_ros_control_sot:
+    type: git
+    url: https://github.com/stack-of-tasks/talos_metapkg_roscontrol_sot.git
+    version: master
+  src/tsid:
+    type: git
+    url: https://github.com/stack-of-tasks/tsid.git
+    version: master
