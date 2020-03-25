@@ -9,7 +9,7 @@ catkin tools should not confused with catkin_make. They can be installed indepen
 
 If you do not have all the source dependencies please follow the steps given in \ref memo_preparing_environment.
 
-Once this is done, to create your SoT workspace using the file [sot_talos.repos](https://github.com/stack-of-tasks/sot-doc/blob/master/config/sot-talos.repos):
+Once this is done, to create your SoT workspace using the file [sot_talos.repos](https://github.com/stack-of-tasks/sot-doc/blob/master/config/sot_talos.repos):
 
     mkdir sot_ws
     vcs import --recursive < sot_talos.repos
