@@ -17,73 +17,72 @@ The repositories for the SoT can be specified in a file sot_talos.repos as follo
     repositories:
         others/robotpkg_helpers:
             type: git
-            url: https://github.com/olivier-stasse/robotpkg_helpers.git
+            url: https://github.com/stack-of-tasks/robotpkg_helpers.git
             version: master
         src/dynamic-graph:
             type: git
             url: https://github.com/stack-of-tasks/dynamic-graph.git
-            version: cmake-export
+            version: master
         src/dynamic-graph-python:
             type: git
-            url: git@github.com:stack-of-tasks/dynamic-graph-python.git
-            version: cmake-export
+            url: https://github.com/stack-of-tasks/dynamic-graph-python.git
+            version: master
         src/dynamic_graph_bridge:
             type: git
             url: https://github.com/stack-of-tasks/dynamic_graph_bridge.git
-            version: cmake-export
+            version: master
         src/dynamic_graph_bridge_msgs:
             type: git
-            url: git@github.com:stack-of-tasks/dynamic_graph_bridge_msgs.git
+            url: https://github.com/stack-of-tasks/dynamic_graph_bridge_msgs.git
             version: master
         src/jrl-walkgen:
             type: git
-            url: git@github.com:stack-of-tasks/jrl-walkgen.git
-            version: cmake-export
+            url: https://github.com/stack-of-tasks/jrl-walkgen.git
+            version: master
         src/roscontrol_sot:
             type: git
-            url: git@github.com:stack-of-tasks/roscontrol_sot.git
-            version: cmake-export
+            url: https://github.com/stack-of-tasks/roscontrol_sot.git
+            version: master
         src/sot-core:
             type: git
             url: https://github.com/stack-of-tasks/sot-core.git
-            version: cmake-export
+            version: master
         src/sot-dynamic-pinocchio:
             type: git
-            url: git@github.com:stack-of-tasks/sot-dynamic-pinocchio.git
-            version: cmake-export
+            url: https://github.com/stack-of-tasks/sot-dynamic-pinocchio.git
+            version: master
         src/sot-pattern-generator:
             type: git
             url: https://github.com/stack-of-tasks/sot-pattern-generator.git
-            version: cmake-export
+            version: master
         src/sot-talos:
             type: git
             url: https://github.com/stack-of-tasks/sot-talos.git
-            version: cmake-export
+            version: master
         src/sot-talos-balance:
             type: git
-            url: git@gepgitlab.laas.fr:loco-3d/sot-talos-balance.git
-            version: cmake-export
+            url: https://github.com/loco-3d/sot-talos-balance.git
+            version: master
         src/sot-tools:
             type: git
             url: https://github.com/stack-of-tasks/sot-tools.git
-            version: cmake-export
+            version: master
         src/sot-torque-control:
             type: git
-            url: git@github.com:stack-of-tasks/sot-torque-control.git
-            version: cmake-export
+            url: https://github.com/stack-of-tasks/sot-torque-control.git
+            version: master
         src/talos_data:
             type: git
-            url: git@github.com:stack-of-tasks/talos_data.git
-            version: cmake-export
+            url: https://github.com/stack-of-tasks/talos_data.git
+            version: master
         src/talos_metapkg_ros_control_sot:
             type: git
             url: https://github.com/stack-of-tasks/talos_metapkg_roscontrol_sot.git
-            version: pal
+            version: master
         src/tsid:
             type: git
-            url: https://github.com/olivier-stasse/tsid.git
-            version: cmake-export
-
+            url: https://github.com/stack-of-tasks/tsid.git
+            version: master
 
 To import all the repositories:
 
