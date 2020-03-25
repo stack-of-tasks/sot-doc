@@ -1,4 +1,4 @@
-# Installation {#c_installation_detailed}
+# Installation - Quick start {#c_installation_detailed}
 
 \section installation_detailed_from_binaries Installation from binary packages
 
