@@ -12,6 +12,8 @@ If you do not have all the source dependencies please follow the steps given in 
 Once this is done, to create your SoT workspace using the file [sot_talos.repos](https://github.com/stack-of-tasks/sot-doc/blob/master/config/sot_talos.repos):
 
     mkdir sot_ws
+    cd sot_ws
+    wget -O sot_talos.repos https://github.com/stack-of-tasks/sot-doc/blob/master/config/sot_talos.repos
     vcs import --recursive < sot_talos.repos
     catkin build
 
