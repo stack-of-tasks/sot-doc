@@ -243,7 +243,7 @@ Modifies the following JSON file:
      "rc_pkgs":
      {},
      "ssh_git_openrobots": false,
-     "targetpkgs": ["talos-dev"]
+     "targetpkgs": ["talos-simulation"]
     }
 
 You can set the variable ```robotpkg_mng_base``` to ```target_dir```. This where all the binaries, libraries, ros packages and documentation will be installed.
