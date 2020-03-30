@@ -140,6 +140,7 @@ A more involved example is the following:
     local_cmake_args="${local_cmake_args} -DPYTHON_STANDARD_LAYOUT:BOOL=ON"
     local_cmake_args="${local_cmake_args} -DPYTHON_DEB_LAYOUT:BOOL=OFF"
     local_cmake_args="${local_cmake_args} -DSETUPTOOLS_DEB_LAYOUT:BOOL=OFF"
+    local_cmake_args="${local_cmake_args} -DCMAKE_CXX_FLAGS=\"-std=c++1\""
     catkin_config_args="--install -w $HOME/devel-src/sot_bionic_ws"
     catkin_config_args="${catking_config_args} ${local_cmake_args}"
     catkin config ${catkin_config_args} --
@@ -243,7 +244,8 @@ Modifies the following JSON file:
      "rc_pkgs":
      {},
      "ssh_git_openrobots": false,
-     "targetpkgs": ["talos-simulation"]
+     "targetpkgs": ["talos-simulation","pinocchio","py-pinocchio","py-eigenpy",
+                "simple-humanoid-description","eiquadprog","parametric-curves"]
     }
 
 You can set the variable ```robotpkg_mng_base``` to ```target_dir```. This where all the binaries, libraries, ros packages and documentation will be installed.
