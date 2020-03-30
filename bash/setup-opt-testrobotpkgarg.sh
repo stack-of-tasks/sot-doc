@@ -45,7 +45,7 @@ done
 
 # Detect Ubuntu release
 if [ -f /etc/lsb-release ]; then
-    (. /etc/lsb-release; 
+    (. /etc/lsb-release;
      echo "#!/bin/bash" > /tmp/local.bash
      echo "export DISTRIB_CODENAME="$DISTRIB_CODENAME >> /tmp/local.bash;
      echo "export DISTRIB_RELEASE="$DISTRIB_RELEASE >> /tmp/local.bash;
@@ -54,45 +54,54 @@ if [ -f /etc/lsb-release ]; then
 fi
 
 if [ $ros_reset -eq 1 ]; then
-  echo "Reset ROS" 
+  echo "Reset ROS"
   # If the release is 12.04 LTS
   if [ $DISTRIB_RELEASE == "12.04" ]; then
-    # ROS is set to Hydro 
+    # ROS is set to Hydro
     source /opt/ros/hydro/setup.bash
-  fi 
+  fi
 
   # If the release is 14.04 LTS
   if [ $DISTRIB_RELEASE == "14.04" ]; then
-    # ROS is set to Indigo 
+    # ROS is set to Indigo
     source /opt/ros/indigo/setup.bash
-  fi 
+  fi
 
   # If the release is 16.04 LTS
   if [ $DISTRIB_RELEASE == "16.04" ]; then
 
     # Specific Machine architecture
     export MACHINE_ARCH=x86_64
-    
-    # ROS is set to Indigo 
+
+    # ROS is set to Indigo
     source /opt/ros/kinetic/setup.bash
   fi
 fi
+
+source /usr/share/gazebo-9/setup.sh
 
 if [ $rpkg_priority -eq 1 ];
 then
   export ROBOTPKG_BASE=$rpkg_path
   export PATH=$ROBOTPKG_BASE/sbin:$ROBOTPKG_BASE/bin:$PATH
-  export LD_LIBRARY_PATH=$ROBOTPKG_BASE/lib:$ROBOTPKG_BASE/lib/plugin:$ROBOTPKG_BASE/lib64:$LD_LIBRARY_PATH
-  export PYTHONPATH=$ROBOTPKG_BASE/lib/python2.7/site-packages:$ROBOTPKG_BASE/lib/python2.7/dist-packages:$PYTHONPATH
+  export LD_LIBRARY_PATH=$ROBOTPKG_BASE/lib:$ROBOTPKG_BASE/lib/dynamic-graph-plugins:$ROBOTPKG_BASE/lib64:$LD_LIBRARY_PATH
+  export PYTHONPATH=$ROBOTPKG_BASE/lib/python2.7/site-packages:$PYTHONPATH
   export PKG_CONFIG_PATH=$ROBOTPKG_BASE/lib/pkgconfig/:$PKG_CONFIG_PATH
   export ROS_PACKAGE_PATH=$ROBOTPKG_BASE/share:$ROBOTPKG_BASE/stacks:$ROS_PACKAGE_PATH
   export CMAKE_PREFIX_PATH=$ROBOTPKG_BASE:$CMAKE_PREFIX_PATH
+  export GAZEBO_MODEL_PATH=$ROBOTPKG_BASE/share/pal_gazebo_worlds/models:$GAZEBO_MODEL_PATH
+  export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:/opt/openrobots/lib
+  export GAZEBO_RESOURCE_PATH=$ROBOTPKG_BASE/share/pal_gazebo_worlds:/usr/share/gazebo-9:$GAZEBO_RESOURCE_PATH
 else
   export ROBOTPKG_BASE=$rpkg_path
   export PATH=$PATH:$ROBOTPKG_BASE/sbin:$ROBOTPKG_BASE/bin
-  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ROBOTPKG_BASE/lib:$ROBOTPKG_BASE/lib/plugin:$ROBOTPKG_BASE/lib64
-  export PYTHONPATH=$PYTHONPATH:$ROBOTPKG_BASE/lib/python2.7/site-packages:$ROBOTPKG_BASE/lib/python2.7/dist-packages
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ROBOTPKG_BASE/lib:$ROBOTPKG_BASE/lib//dynamic-graph-plugins:$ROBOTPKG_BASE/lib64
+  export PYTHONPATH=$PYTHONPATH:$ROBOTPKG_BASE/lib/python2.7/site-packages
   export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$ROBOTPKG_BASE/lib/pkgconfig/
   export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$ROBOTPKG_BASE/share:$ROBOTPKG_BASE/stacks
   export CMAKE_PREFIX_PATH=$CMAKE_PREFIX_PATH:$ROBOTPKG_BASE
+  export GAZEBO_MODEL_PATH=$ROBOTPKG_BASE/share/pal_gazebo_worlds/models:$GAZEBO_MODEL_PATH
+  export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:$ROBOTPKG_BASE/lib
+  export GAZEBO_RESOURCE_PATH=$ROBOTBPKG_BASE/share/pal_gazebo_worlds:/usr/share/gazebo-9:$GAZEBO_RESOURCE_PATH
+
 fi
