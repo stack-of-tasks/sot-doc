@@ -15,10 +15,10 @@ jobs:
       run: git submodule update
     - name: configure
       run: cmake .
-    - name: make
-      run: make
     - name: make doc
-      run: make doc
+      uses: mattnotmitt/doxygen-action@v1
+      with:
+        doxyfile-path: 'doc'
     - name: Build and Deploy GH Pages
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
