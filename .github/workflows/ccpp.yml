@@ -18,7 +18,7 @@ jobs:
     - name: make doc
       uses: mattnotmitt/doxygen-action@v1
       with:
-        doxyfile-path: 'doc'
+        doxyfile-path: 'doc/Doxyfile'
     - name: Build and Deploy GH Pages
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
