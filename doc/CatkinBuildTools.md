@@ -13,7 +13,7 @@ Once this is done, to create your SoT workspace using the file [sot_talos.repos]
 
     wget -O install-sot-catkin-ws.sh https://raw.githubusercontent.com/stack-of-tasks/sot-doc/master/bash/install-sot-catkin-ws.sh
     chmod +x ./install-sot-catkin-ws.sh
-    ./install-sot-catkin-ws.sh -p /tmp/sot_ws
+    ./install-sot-catkin-ws.sh -p sot_ws
 
 
 \subsection memto_catkin_tools_quick_start_explanations Quick start explanations
@@ -25,6 +25,9 @@ The previous script is doing the following steps:
     wget -O sot_talos.repos https://raw.githubusercontent.com/stack-of-tasks/sot-doc/master/config/sot_talos.repos
     vcs import --recursive < sot_talos.repos
     # configure your catkin environment
+
+To build everything you can simply type:
+
     catkin build
 
 The cmake arguments are explained in more details in \ref memo_catkin_tools_compiling
@@ -154,7 +157,7 @@ A more involved example is the following:
     local_cmake_args="${local_cmake_args} -DPYTHON_DEB_LAYOUT:BOOL=OFF"
     local_cmake_args="${local_cmake_args} -DSETUPTOOLS_DEB_LAYOUT:BOOL=OFF"
     local_cmake_args="${local_cmake_args} -DCMAKE_CXX_FLAGS=\"-std=c++1\""
-    catkin_config_args="--install -w $HOME/devel-src/sot_bionic_ws"
+    catkin_config_args="--install -w sot_ws"
     catkin_config_args="${catking_config_args} ${local_cmake_args}"
     catkin config ${catkin_config_args} --
 
