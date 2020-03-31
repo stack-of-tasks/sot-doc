@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Install SoT catkin SoT workspace
-# Olivier Stasse 
+# Olivier Stasse
 # CNRS, LAAS 2020
 #
 
@@ -85,7 +85,7 @@ checking_if_commands_are_installed()
     for i in  ${!executable_names[@]}; do
         checking_if_a_command_is_installed ${executable_names[$i]} ${packages_names[$i]}
     done
-    id_step=$((id_step+1))    
+    id_step=$((id_step+1))
 }
 
 # Prepare SoT workspace directoy
@@ -116,12 +116,12 @@ get_sot_repos()
 
 configure_catkin()
 {
-    echo "* ${purple}[$id_step/$nb_steps]${std} Configure catkin"    
+    echo "* ${purple}[$id_step/$nb_steps]${std} Configure catkin"
     local_cmake_args="--cmake-args -DCMAKE_BUILD_TYPE=DEBUG "
     local_cmake_args="${local_cmake_args} -DPYTHON_STANDARD_LAYOUT:BOOL=ON"
     local_cmake_args="${local_cmake_args} -DPYTHON_DEB_LAYOUT:BOOL=OFF"
     local_cmake_args="${local_cmake_args} -DSETUPTOOLS_DEB_LAYOUT:BOOL=OFF"
-    local_cmake_args="${local_cmake_args} -DCMAKE_CXX_FLAGS=\"-std=c++1\""    
+    local_cmake_args="${local_cmake_args} -DCMAKE_CXX_FLAGS=\"-std=c++11\""
     catkin_config_args="--install -w $rpkg_path"
     catkin_config_args="${catking_config_args} ${local_cmake_args}"
     catkin config ${catkin_config_args} --
@@ -151,6 +151,12 @@ if test -t 1; then
   set_colors
 else # stdout isn't a tty => don't print colors.
   set_nocolors
+fi
+
+if [ -z "$rpkg_path" ]; then
+    echo "${red}Please define -p rpkg_path${std}"
+    usage
+    exit -1
 fi
 
 # Main starts from here
