@@ -61,6 +61,7 @@
     <filename>memo_catkin_tools</filename>
     <docanchor file="memo_catkin_tools" title="Introduction">memo_catkin_tools_intro</docanchor>
     <docanchor file="memo_catkin_tools" title="Quick start">memo_catkin_tools_quick_start</docanchor>
+    <docanchor file="memo_catkin_tools" title="Quick start explanations">memto_catkin_tools_quick_start_explanations</docanchor>
     <docanchor file="memo_catkin_tools" title="Handling the repositories (VCS)">memo_catkin_tools_vcs</docanchor>
     <docanchor file="memo_catkin_tools" title="Checking out the SoT infra-structure">memo_catkin_tools_vcs_checkingout</docanchor>
     <docanchor file="memo_catkin_tools" title="Getting the current status of the repos">memo_catkin_tools_vcs_status</docanchor>
@@ -75,6 +76,7 @@
     <docanchor file="memo_catkin_tools" title="Running tests">memo_catkin_tools_run_tests</docanchor>
     <docanchor file="memo_catkin_tools" title="Computing coverage">memo_catkin_tools_compute_coverage</docanchor>
     <docanchor file="memo_catkin_tools" title="Installing dependencies">memo_preparing_environment</docanchor>
+    <docanchor file="memo_catkin_tools" title="Quick start">subsec_preparing_env_from_rpkg_bash</docanchor>
     <docanchor file="memo_catkin_tools" title="Robotpkg Only">subsec_preparing_env_from_rpkg_only</docanchor>
     <docanchor file="memo_catkin_tools" title="Robotpkg helpers repository">subsec_preparing_env_from_rpkg_helpers</docanchor>
     <docanchor file="memo_catkin_tools" title="Chaining workspaces">subsec_preparing_env_chaining_ws</docanchor>

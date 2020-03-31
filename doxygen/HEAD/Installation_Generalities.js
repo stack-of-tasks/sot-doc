@@ -20,7 +20,8 @@ var Installation_Generalities =
     ] ],
     [ "Using catkin tools and vcs for the SoT", "memo_catkin_tools.html", [
       [ "Introduction", "memo_catkin_tools.html#memo_catkin_tools_intro", [
-        [ "Quick start", "memo_catkin_tools.html#memo_catkin_tools_quick_start", null ]
+        [ "Quick start", "memo_catkin_tools.html#memo_catkin_tools_quick_start", null ],
+        [ "Quick start explanations", "memo_catkin_tools.html#memto_catkin_tools_quick_start_explanations", null ]
       ] ],
       [ "Handling the repositories (VCS)", "memo_catkin_tools.html#memo_catkin_tools_vcs", [
         [ "Checking out the SoT infra-structure", "memo_catkin_tools.html#memo_catkin_tools_vcs_checkingout", null ],
@@ -39,6 +40,7 @@ var Installation_Generalities =
         [ "Computing coverage", "memo_catkin_tools.html#memo_catkin_tools_compute_coverage", null ]
       ] ],
       [ "Installing dependencies", "memo_catkin_tools.html#memo_preparing_environment", [
+        [ "Quick start", "memo_catkin_tools.html#subsec_preparing_env_from_rpkg_bash", null ],
         [ "Robotpkg Only", "memo_catkin_tools.html#subsec_preparing_env_from_rpkg_only", null ],
         [ "Robotpkg helpers repository", "memo_catkin_tools.html#subsec_preparing_env_from_rpkg_helpers", null ],
         [ "Chaining workspaces", "memo_catkin_tools.html#subsec_preparing_env_chaining_ws", null ]
