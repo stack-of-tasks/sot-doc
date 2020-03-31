@@ -73,7 +73,7 @@ extract_robotpkg_helpers()
         mkdir -p $rpkg_src_path
     fi
     cd $rpkg_src_path
-    git clone git@github.com:olivier-stasse/robotpkg_helpers.git
+    git clone https://github.com/olivier-stasse/robotpkg_helpers.git
     cd robotpkg_helpers/tools
     generate_json_file
     ./rpkgh_build_arch_rc.py ./arch_test_sot_only.json
