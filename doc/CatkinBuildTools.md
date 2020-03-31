@@ -2,7 +2,7 @@
 
 \section memo_catkin_tools_intro Introduction
 
-This memo explains how to handle a super build (set of packages) workspace of the SoT with catkin tools.
+This memo explains how to create and handle a super build (set of packages) workspace of the SoT with catkin tools.
 catkin tools should not confused with catkin_make. They can be installed independently from ROS.
 
 \subsection memo_catkin_tools_quick_start Quick start
@@ -11,14 +11,23 @@ If you do not have all the source dependencies please follow the steps given in 
 
 Once this is done, to create your SoT workspace using the file [sot_talos.repos](https://github.com/stack-of-tasks/sot-doc/blob/master/config/sot_talos.repos):
 
+    wget -O install-sot-catkin-ws.sh https://raw.githubusercontent.com/stack-of-tasks/sot-doc/master/bash/install-sot-catkin-ws.sh
+    chmod +x ./install-sot-catkin-ws.sh
+    ./install-sot-catkin-ws.sh -p /tmp/sot_ws
+
+
+\subsection memto_catkin_tools_quick_start_explanations Quick start explanations
+
+The previous script is doing the following steps:
+
     mkdir sot_ws
     cd sot_ws
     wget -O sot_talos.repos https://raw.githubusercontent.com/stack-of-tasks/sot-doc/master/config/sot_talos.repos
     vcs import --recursive < sot_talos.repos
+    # configure your catkin environment
     catkin build
 
-That's it.
-
+The cmake arguments are explained in more details in \ref memo_catkin_tools_compiling
 
 \section memo_catkin_tools_vcs Handling the repositories (VCS)
 
@@ -63,6 +72,10 @@ The repositories for the SoT can be specified in a file sot_talos.repos as follo
             type: git
             url: https://github.com/stack-of-tasks/sot-core.git
             version: master
+        src/sot-doc:
+            type: git
+            url: https://github.com/stack-of-tasks/sot-doc.git
+            version: master
         src/sot-dynamic-pinocchio:
             type: git
             url: https://github.com/stack-of-tasks/sot-dynamic-pinocchio.git
@@ -75,7 +88,7 @@ The repositories for the SoT can be specified in a file sot_talos.repos as follo
             type: git
             url: https://github.com/stack-of-tasks/sot-talos.git
             version: master
-        src/sot-talos-balance:
+        src/sot_talos_balance:
             type: git
             url: https://github.com/loco-3d/sot-talos-balance.git
             version: master
@@ -220,18 +233,32 @@ They are several ways to install the dependencies of the SoT from sources in a t
 We gave here two methods to install the necessary software environment for the Stack-of-Tasks.
 To illustrate the process the Talos humanoid robot related packages are used.
 
+\subsection subsec_preparing_env_from_rpkg_bash Quick start
+
+To install the necessary SoT software dependency in '''target_dir``` you can simply try:
+
+    wget -O install-dep-thru-rpkg.sh https://raw.githubusercontent.com/stack-of-tasks/sot-doc/master/bash/install-dep-thru-rpkg.sh
+    chmod +x ./install-dep-thru-rpgh.sh
+    ./install-dep-thru-rpgh.sh -p /tmp/target_dir -s /tmp/robotpkg_src
+
+The robotpkg source directory will store in ```/tmp/robotpkg_src```
+
+
 \subsection subsec_preparing_env_from_rpkg_only Robotpkg Only
 
-You need to install the package management system robotpkg as detailed in \ref installation_from_source .
+You can install the package management system [robotpkg](http://robotpkg.openrobots.org/) as detailed in \ref installation_from_source .
 During the procedure make sure that prefix is set to ```target_dir```.
 
 \subsection subsec_preparing_env_from_rpkg_helpers Robotpkg helpers repository
+
+An intermediate solution between the two previous solution is to use a tool which configure robotpkg.
+It is done through the following steps:
 
 Clone the following repository :
 
     git clone robotpkg_helpers https://github.com/olivier-stasse/robotpkg_helpers
 
-Modifies the following JSON file:
+Modify the following JSON file:
 
     {"arch_dist_files": "arch_distfiles",
      "archives": "archives",
