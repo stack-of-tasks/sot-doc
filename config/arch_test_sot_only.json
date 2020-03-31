@@ -1,14 +1,15 @@
 {"arch_dist_files": "arch_distfiles",
  "archives": "archives",
- "ramfs_mnt_pt": "openrobots", 
+ "ramfs_mnt_pt": "/tmp/openrobots",
  "repo_robotpkg_wip": "https://git.openrobots.org/robots/robotpkg/robotpkg-wip.git",
- "repo_robotpkg_main": "git://git.openrobots.org/robots/robotpkg.git",
- "robotpkg_mng_root": "/integration_tests",
- "robotpkg_mng_base": "/integration_tests/openrobots",
- "robotpkg_mng_src": "/integration_tests/test-openrobots-src",  
- "rc_pkgs":
- {},
+ "repo_robotpkg_main": "https://git.openrobots.org/robots/robotpkg.git",
+ "robotpkg_mng_root": "/tmp/openrobots/..",
+ "robotpkg_mng_base": "/tmp/openrobots",
+ "robotpkg_mng_src": "/tmp/test-robotpkg-src",
+ "rc_pkgs": {},
  "ssh_git_openrobots": false,
- "targetpkgs": ["talos-simulation","pinocchio","py-pinocchio","py-eigenpy",
-                "simple-humanoid-description","eiquadprog","parametric-curves"]
+ "targetpkgs": ["py-eigenpy",
+    "pinocchio","py-pinocchio",
+    "eiquadprog","simple-humanoid-description",
+    "parametric-curves","talos-simulation"]
 }
