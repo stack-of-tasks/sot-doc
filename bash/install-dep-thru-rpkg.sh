@@ -57,10 +57,10 @@ generate_json_file()
     echo " \"robotpkg_mng_src\": \"$rpkg_src_path\"," >> arch_test_sot_only.json
     echo " \"rc_pkgs\": {}," >> arch_test_sot_only.json
     echo " \"ssh_git_openrobots\": false, " >> arch_test_sot_only.json
-    echo " \"targetpkgs\": [\"talos-simulation\"," >> arch_test_sot_only.json
+    echo " \"targetpkgs\": [\"py-eigenpy\"," >> arch_test_sot_only.json
     echo "    \"pinocchio\",\"py-pinocchio\"," >> arch_test_sot_only.json
-    echo "    \"py-eigenpy\",\"simple-humanoid-description\"," >> arch_test_sot_only.json
-    echo "    \"eiquadprog\",\"parametric-curves\"]">> arch_test_sot_only.json
+    echo "    \"eiquadprog\",\"simple-humanoid-description\"," >> arch_test_sot_only.json
+    echo "    \"parametric-curves\",\"talos-simulation\"]">> arch_test_sot_only.json
     echo "}" >> arch_test_sot_only.json
 }
 
