@@ -43,7 +43,7 @@ repositories:
     type: git
     url: https://github.com/stack-of-tasks/sot-talos.git
     version: master
-  src/sot-talos-balance:
+  src/sot_talos_balance:
     type: git
     url: https://github.com/loco-3d/sot-talos-balance.git
     version: master
