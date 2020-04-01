@@ -110,7 +110,7 @@ Quick start</h2>
 <p>If you do not have all the source dependencies please follow the steps given in <a class="el" href="memo_catkin_tools.html#memo_preparing_environment">Installing dependencies</a>.</p>
 <p>Once this is done, to create your SoT workspace using the file <a href="https://github.com/stack-of-tasks/sot-doc/blob/master/config/sot_talos.repos">sot_talos.repos</a>: </p><pre class="fragment">wget -O install-sot-catkin-ws.sh https://raw.githubusercontent.com/stack-of-tasks/sot-doc/master/bash/install-sot-catkin-ws.sh
 chmod +x ./install-sot-catkin-ws.sh
-./install-sot-catkin-ws.sh -p /tmp/sot_ws
+./install-sot-catkin-ws.sh -p sot_ws
 </pre><h2><a class="anchor" id="memto_catkin_tools_quick_start_explanations"></a>
 Quick start explanations</h2>
 <p>The previous script is doing the following steps: </p><pre class="fragment">mkdir sot_ws
@@ -118,7 +118,7 @@ cd sot_ws
 wget -O sot_talos.repos https://raw.githubusercontent.com/stack-of-tasks/sot-doc/master/config/sot_talos.repos
 vcs import --recursive &lt; sot_talos.repos
 # configure your catkin environment
-catkin build
+</pre><p>To build everything you can simply type: </p><pre class="fragment">catkin build
 </pre><p>The cmake arguments are explained in more details in <a class="el" href="memo_catkin_tools.html#memo_catkin_tools_compiling">Compiling and testing the packages (catkin)</a></p>
 <h1><a class="anchor" id="memo_catkin_tools_vcs"></a>
 Handling the repositories (VCS)</h1>
@@ -218,7 +218,7 @@ local_cmake_args="${local_cmake_args} -DPYTHON_STANDARD_LAYOUT:BOOL=ON"
 local_cmake_args="${local_cmake_args} -DPYTHON_DEB_LAYOUT:BOOL=OFF"
 local_cmake_args="${local_cmake_args} -DSETUPTOOLS_DEB_LAYOUT:BOOL=OFF"
 local_cmake_args="${local_cmake_args} -DCMAKE_CXX_FLAGS=\"-std=c++1\""
-catkin_config_args="--install -w $HOME/devel-src/sot_bionic_ws"
+catkin_config_args="--install -w sot_ws"
 catkin_config_args="${catking_config_args} ${local_cmake_args}"
 catkin config ${catkin_config_args} --
 </pre><h2><a class="anchor" id="memo_catkin_tools_compiling_compiling"></a>
@@ -293,7 +293,7 @@ source setup-opt-testrobotpkgarg.sh -p sot_ws/install -r</pre> </div></div><!-- 
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Mar 31 2020 09:33:43 for sot-doc by
+    <li class="footer">Generated on Wed Apr 1 2020 10:01:02 for sot-doc by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>
