@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Install SoT dependencies through robotpkg
-# Olivier Stasse 
+# Olivier Stasse
 # CNRS, LAAS 2020
 #
 
@@ -57,7 +57,8 @@ generate_json_file()
     echo " \"robotpkg_mng_src\": \"$rpkg_src_path\"," >> arch_test_sot_only.json
     echo " \"rc_pkgs\": {}," >> arch_test_sot_only.json
     echo " \"ssh_git_openrobots\": false, " >> arch_test_sot_only.json
-    echo " \"targetpkgs\": [\"py-eigenpy\"," >> arch_test_sot_only.json
+    echo " \"targetpkgs\": [\"pal-msgs\",\"py-eigenpy\"," >> arch_test_sot_only.json
+    echo "    \"pyrene-motions\"," >> arch_test_sot_only.json
     echo "    \"pinocchio\",\"py-pinocchio\"," >> arch_test_sot_only.json
     echo "    \"eiquadprog\",\"simple-humanoid-description\"," >> arch_test_sot_only.json
     echo "    \"parametric-curves\",\"talos-simulation\"]">> arch_test_sot_only.json
@@ -110,13 +111,13 @@ fi
 if [ -z "$rpkg_path" ]; then
     echo "${red}Please define -p rpkg_path${std}"
     usage
-    exit -1    
+    exit -1
 fi
 
 if [ -z "$rpkg_src_path" ]; then
     echo "${red}Please define -s rpkg_src_path${std}"
     usage
-    exit -1    
+    exit -1
 fi
 
 
