@@ -91,7 +91,7 @@ The repositories for the SoT can be specified in a file sot_talos.repos as follo
             type: git
             url: https://github.com/stack-of-tasks/sot-talos.git
             version: master
-        src/sot_talos_balance:
+        src/sot-talos-balance:
             type: git
             url: https://github.com/loco-3d/sot-talos-balance.git
             version: master
