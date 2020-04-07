@@ -33,7 +33,7 @@ Please follow the instructions given <a href="http://robotpkg.openrobots.org/deb
 
     To get all packages available to simulate the TALOS robot available at LAAS:
 
-        sudo apt install robotpkg-talos-dev
+        sudo apt install robotpkg-py27-talos-dev
 
 5. Now all has been installed in the directory /opt/openrobots.
    You need to make sure that your environment variables are set correctly by following \ref d_setting_up_environment
@@ -71,6 +71,10 @@ To compile and install the talos simulation environment, it is best to use the p
     cd robotpkg/wip/talos-simulation
     make install
     
+To compile the Stack-Of-Tasks control structure from source and not for development:
+
+    cd robotpkg/wip/py-talos-dev
+    make install
 
 \subsection installation_from_source_old_school Installing each package manually
 
