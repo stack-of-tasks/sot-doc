@@ -80,8 +80,8 @@ To compile the Stack-Of-Tasks control structure from source and not for developm
 
 1. Create an environment:
 
-        mkdir -p sot_ws/src sot_ws/install sot_ws/build
-        cd sot_ws/src
+        mkdir -p /path_to_sot_ws/src /path_to_sot_ws/install /path_to_sot_ws/build
+        cd /path_to_sot_ws/src
     
 2. For a package (let us say dynamic-graph):
 
