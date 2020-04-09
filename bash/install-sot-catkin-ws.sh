@@ -118,7 +118,7 @@ configure_catkin()
 {
     cd ${rpkg_path}
     echo "* ${purple}[$id_step/$nb_steps]${std} Configure catkin"
-    local_cmake_args="--cmake-args -DCMAKE_BUILD_TYPE=DEBUG "
+    local_cmake_args="--cmake-args -DCMAKE_BUILD_TYPE=RELEASE "
     local_cmake_args="${local_cmake_args} -DPYTHON_STANDARD_LAYOUT:BOOL=ON"
     local_cmake_args="${local_cmake_args} -DPYTHON_DEB_LAYOUT:BOOL=OFF"
     local_cmake_args="${local_cmake_args} -DSETUPTOOLS_DEB_LAYOUT:BOOL=OFF"
