@@ -61,6 +61,9 @@
     <filename>memo_catkin_tools</filename>
     <docanchor file="memo_catkin_tools" title="Introduction">memo_catkin_tools_intro</docanchor>
     <docanchor file="memo_catkin_tools" title="Quick start">memo_catkin_tools_quick_start</docanchor>
+    <docanchor file="memo_catkin_tools" title="Install dependencies">memo_catkin_tools_quick_start_depends</docanchor>
+    <docanchor file="memo_catkin_tools" title="Setup your environment">memo_catkin_tools_quick_start_setnv</docanchor>
+    <docanchor file="memo_catkin_tools" title="Create your workspace">_catkin_tools_quick_create_ws</docanchor>
     <docanchor file="memo_catkin_tools" title="Quick start explanations">memto_catkin_tools_quick_start_explanations</docanchor>
     <docanchor file="memo_catkin_tools" title="Handling the repositories (VCS)">memo_catkin_tools_vcs</docanchor>
     <docanchor file="memo_catkin_tools" title="Checking out the SoT infra-structure">memo_catkin_tools_vcs_checkingout</docanchor>

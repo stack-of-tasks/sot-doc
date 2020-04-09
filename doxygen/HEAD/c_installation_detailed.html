@@ -118,7 +118,7 @@ EOF
 <li>Update the list of available packages Please follow the instructions given <a href="http://robotpkg.openrobots.org/debian.html">here</a> to access the package repository. <pre class="fragment">sudo apt update
 </pre></li>
 <li><p class="startli">Install the package sot-core-v3 you can use </p><pre class="fragment"> sudo apt install robotpkg-sot-core-v3
-</pre><p class="startli">To get all packages available to simulate the TALOS robot available at LAAS: </p><pre class="fragment">sudo apt install robotpkg-talos-dev
+</pre><p class="startli">To get all packages available to simulate the TALOS robot available at LAAS: </p><pre class="fragment">sudo apt install robotpkg-py27-talos-dev
 </pre></li>
 <li>Now all has been installed in the directory /opt/openrobots. You need to make sure that your environment variables are set correctly by following <a class="el" href="c_installation_detailed.html#d_setting_up_environment">Setting up your environment</a></li>
 <li>You can now try the tutorials.</li>
@@ -136,11 +136,13 @@ Installing from robotpkg (to prepare an environment)</h2>
 <p>You will also have to install the wip (work in progress) part of robotpkg. The installation procedure is described <a href="http://robotpkg.openrobots.org/robotpkg-wip.html">here</a>.</p>
 <p>To compile and install the talos simulation environment, it is best to use the package <b>talos-simulation</b> then you can type: </p><pre class="fragment">cd robotpkg/wip/talos-simulation
 make install
+</pre><p>To compile the Stack-Of-Tasks control structure from source and not for development: </p><pre class="fragment">cd robotpkg/wip/py-talos-dev
+make install
 </pre><h2><a class="anchor" id="installation_from_source_old_school"></a>
 Installing each package manually</h2>
 <ol type="1">
-<li>Create an environment: <pre class="fragment"> mkdir -p sot_ws/src sot_ws/install sot_ws/build
- cd sot_ws/src
+<li>Create an environment: <pre class="fragment"> mkdir -p /path_to_sot_ws/src /path_to_sot_ws/install /path_to_sot_ws/build
+ cd /path_to_sot_ws/src
 </pre></li>
 <li>For a package (let us say dynamic-graph): <pre class="fragment"> git clone git@github.com:stack-of-tasks/dynamic-graph.git --recursive
  cd ../build
@@ -179,7 +181,7 @@ Setting up your environment</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Apr 6 2020 18:47:50 for sot-doc by
+    <li class="footer">Generated on Thu Apr 9 2020 05:40:25 for sot-doc by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>
