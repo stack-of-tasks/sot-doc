@@ -78,7 +78,9 @@ if [ $ros_reset -eq 1 ]; then
   fi
 fi
 
-source /usr/share/gazebo-9/setup.sh
+if [ -f /usr/share/gazebo-9/setup.sh ]; then
+    source /usr/share/gazebo-9/setup.sh
+fi
 
 if [ $rpkg_priority -eq 1 ];
 then
