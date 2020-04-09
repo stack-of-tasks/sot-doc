@@ -116,6 +116,7 @@ get_sot_repos()
 
 configure_catkin()
 {
+    cd ${rpkg_path}
     echo "* ${purple}[$id_step/$nb_steps]${std} Configure catkin"
     local_cmake_args="--cmake-args -DCMAKE_BUILD_TYPE=DEBUG "
     local_cmake_args="${local_cmake_args} -DPYTHON_STANDARD_LAYOUT:BOOL=ON"
@@ -123,9 +124,10 @@ configure_catkin()
     local_cmake_args="${local_cmake_args} -DSETUPTOOLS_DEB_LAYOUT:BOOL=OFF"
     local_cmake_args="${local_cmake_args} -DCMAKE_CXX_FLAGS=\"-std=c++11\""
     catkin_config_args="--install -w $rpkg_path"
-    catkin_config_args="${catking_config_args} ${local_cmake_args}"
+    catkin_config_args="${catkin_config_args} ${local_cmake_args}"
     catkin config ${catkin_config_args} --
     id_step=$((id_step+1))
+    echo "catkin config ${catkin_config_args} --"
 }
 
 # Dealing with parameters
