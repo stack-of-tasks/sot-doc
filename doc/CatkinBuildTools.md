@@ -7,21 +7,37 @@ catkin tools should not confused with catkin_make. They can be installed indepen
 
 \subsection memo_catkin_tools_quick_start Quick start
 
-If you do not have all the source dependencies please follow the steps given in \ref memo_preparing_environment.
+\subsubsection memo_catkin_tools_quick_start_depends Install dependencies
+
+To install the necessary SoT software dependency in '''/path_to_target_dir``` you can simply try:
+
+    wget -O install-dep-thru-rpkg.sh https://raw.githubusercontent.com/stack-of-tasks/sot-doc/master/bash/install-dep-thru-rpkg.sh
+    chmod +x ./install-dep-thru-rpgh.sh
+    ./install-dep-thru-rpgh.sh -p /path_to_target_dir -s /path_to_robotpkg_src
+
+This will install the binairies in ```/path_to_target_dir``` and store the sources in ```/path_to_robotpkg_src```.
+
+Other options to install the source dependencies are given in \ref memo_preparing_environment.
+
+\subsubsection memo_catkin_tools_quick_start_setnv Setup your environment
+
+    source setup-opt-testrobotpkgarg.sh -p /path_to_target_dir -r
+    source setup-opt-testrobotpkgarg.sh -p /path_to_sot_ws/install -r
+
+\subsubsection _catkin_tools_quick_create_ws Create your workspace
 
 Once this is done, to create your SoT workspace using the file [sot_talos.repos](https://github.com/stack-of-tasks/sot-doc/blob/master/config/sot_talos.repos):
 
     wget -O install-sot-catkin-ws.sh https://raw.githubusercontent.com/stack-of-tasks/sot-doc/master/bash/install-sot-catkin-ws.sh
     chmod +x ./install-sot-catkin-ws.sh
-    ./install-sot-catkin-ws.sh -p sot_ws
-
+    ./install-sot-catkin-ws.sh -p /path_to_sot_ws
 
 \subsection memto_catkin_tools_quick_start_explanations Quick start explanations
 
 The previous script is doing the following steps:
 
-    mkdir sot_ws
-    cd sot_ws
+    mkdir -p /path_to_sot_ws
+    cd /path_to_sot_ws
     wget -O sot_talos.repos https://raw.githubusercontent.com/stack-of-tasks/sot-doc/master/config/sot_talos.repos
     vcs import --recursive < sot_talos.repos
     # configure your catkin environment
@@ -145,6 +161,7 @@ This will pull the current branch from its upstream remote server.
 For instance we want to force the system to be in debug mode
 and to set some variables we can use the following command:
 
+    cd /path_to_sot_ws
     catkin config --install --cmake-args -DCMAKE_BUILD_TYPE=DEBUG
 
 It forces the package to be installed in the install folder,
@@ -157,7 +174,7 @@ A more involved example is the following:
     local_cmake_args="${local_cmake_args} -DPYTHON_DEB_LAYOUT:BOOL=OFF"
     local_cmake_args="${local_cmake_args} -DSETUPTOOLS_DEB_LAYOUT:BOOL=OFF"
     local_cmake_args="${local_cmake_args} -DCMAKE_CXX_FLAGS=\"-std=c++1\""
-    catkin_config_args="--install -w sot_ws"
+    catkin_config_args="--install -w /path_to_sot_ws"
     catkin_config_args="${catking_config_args} ${local_cmake_args}"
     catkin config ${catkin_config_args} --
 
@@ -232,25 +249,25 @@ To get the output of the coverage:
 
 \section memo_preparing_environment Installing dependencies
 
-They are several ways to install the dependencies of the SoT from sources in a target directory ```target_dir```
+They are several ways to install the dependencies of the SoT from sources in a target directory ```/path_to_target_dir```
 We gave here two methods to install the necessary software environment for the Stack-of-Tasks.
 To illustrate the process the Talos humanoid robot related packages are used.
 
 \subsection subsec_preparing_env_from_rpkg_bash Quick start
 
-To install the necessary SoT software dependency in '''target_dir``` you can simply try:
+To install the necessary SoT software dependency in '''/path_to_target_dir``` you can simply try:
 
     wget -O install-dep-thru-rpkg.sh https://raw.githubusercontent.com/stack-of-tasks/sot-doc/master/bash/install-dep-thru-rpkg.sh
     chmod +x ./install-dep-thru-rpgh.sh
-    ./install-dep-thru-rpgh.sh -p /tmp/target_dir -s /tmp/robotpkg_src
+    ./install-dep-thru-rpgh.sh -p /path_to_target_dir -s /path_to_robotpkg_src
 
-The robotpkg source directory will store in ```/tmp/robotpkg_src```
+The robotpkg source directory will be stored in ```/path_to_robotpkg_src```
 
 
 \subsection subsec_preparing_env_from_rpkg_only Robotpkg Only
 
 You can install the package management system [robotpkg](http://robotpkg.openrobots.org/) as detailed in \ref installation_from_source .
-During the procedure make sure that prefix is set to ```target_dir```.
+During the procedure make sure that prefix is set to ```/path_to_target_dir```.
 
 \subsection subsec_preparing_env_from_rpkg_helpers Robotpkg helpers repository
 
@@ -278,7 +295,7 @@ Modify the following JSON file:
                 "simple-humanoid-description","eiquadprog","parametric-curves"]
     }
 
-You can set the variable ```robotpkg_mng_base``` to ```target_dir```. This where all the binaries, libraries, ros packages and documentation will be installed.
+You can set the variable ```robotpkg_mng_base``` to ```/path_to_target_dir```. This where all the binaries, libraries, ros packages and documentation will be installed.
 The variable ```robotpkg_mng_src``` specifies where the robotpkg sources are stored.
 
 \subsection subsec_preparing_env_chaining_ws Chaining workspaces
@@ -290,5 +307,5 @@ To chain the workspace you can either follow this tutorial
 with the workspace where all the SoT packages are located, or make an alias calling the script
 [setup-opt-testrobotpkgarg.sh](https://github.com/stack-of-tasks/sot-doc/blob/master/bash/setup-opt-testrobotpkgarg.sh)
 
-    source setup-opt-testrobotpkgarg.sh -p target_dir -r
-    source setup-opt-testrobotpkgarg.sh -p sot_ws/install -r
+    source setup-opt-testrobotpkgarg.sh -p /path_to_target_dir -r
+    source setup-opt-testrobotpkgarg.sh -p /path_to_sot_ws/install -r
