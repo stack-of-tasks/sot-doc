@@ -36,3 +36,10 @@ TALOS meta package | [robotpkg-talos-dev](http://robotpkg.openrobots.org/rbulk/r
 [sot-tiago](https://github.com/stack-of-tasks/sot-tiago) | [robotpkg-sot-tiago](http://robotpkg.openrobots.org/rbulk/robotpkg-wip/wip/sot-tiago/) | [sot-tiago](https://gepettoweb.laas.fr/doc/stack-of-tasks/sot-tiago/master/doxygen-html/)
 [tiago-metapkg-roscontrol-sot](https://github.com/stack-of-tasks/tiago_metapkg_roscontrol_sot) |  [robotpkg-tiago-metapkg-roscontrol-sot](http://robotpkg.openrobots.org/rbulk/robotpkg-wip/wip/tiago-metapkg-ros-control-sot) | [tiago-metapkg-roscontrol-sot](https://gepettoweb.laas.fr/doc/stack-of-tasks/tiago-metapkg-ros-control-sot/master/doxygen-html/)
 TIAGO meta package | [robotpkg-tiago-dev](http://robotpkg.openrobots.org/rbulk/robotpkg-wip/wip/tiago-dev) | No documentation
+
+
+\section status_robotpkg_binaries_doc_local Finding the documentation on your machine
+
+If you have the stack of tasks installed on your system, the documentation corresponding to the installed version is available in the following directory:
+
+    ${target_dir}/share/doc/package_name
