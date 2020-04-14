@@ -12,8 +12,8 @@ catkin tools should not confused with catkin_make. They can be installed indepen
 To install the necessary SoT software dependency in '''/path_to_target_dir``` you can simply try:
 
     wget -O install-dep-thru-rpkg.sh https://raw.githubusercontent.com/stack-of-tasks/sot-doc/master/bash/install-dep-thru-rpkg.sh
-    chmod +x ./install-dep-thru-rpgh.sh
-    ./install-dep-thru-rpgh.sh -p /path_to_target_dir -s /path_to_robotpkg_src
+    chmod +x ./install-dep-thru-rpkg.sh
+    ./install-dep-thru-rpkg.sh -p /path_to_target_dir -s /path_to_robotpkg_src
 
 This will install the binairies in ```/path_to_target_dir``` and store the sources in ```/path_to_robotpkg_src```.
 
@@ -258,8 +258,8 @@ To illustrate the process the Talos humanoid robot related packages are used.
 To install the necessary SoT software dependency in '''/path_to_target_dir``` you can simply try:
 
     wget -O install-dep-thru-rpkg.sh https://raw.githubusercontent.com/stack-of-tasks/sot-doc/master/bash/install-dep-thru-rpkg.sh
-    chmod +x ./install-dep-thru-rpgh.sh
-    ./install-dep-thru-rpgh.sh -p /path_to_target_dir -s /path_to_robotpkg_src
+    chmod +x ./install-dep-thru-rpkg.sh
+    ./install-dep-thru-rpkg.sh -p /path_to_target_dir -s /path_to_robotpkg_src
 
 The robotpkg source directory will be stored in ```/path_to_robotpkg_src```
 
