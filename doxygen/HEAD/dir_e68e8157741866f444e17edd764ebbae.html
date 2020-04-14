@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
-<title>sot-doc: Overview</title>
+<title>sot-doc: doc Directory Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="pinocchio.ico" rel="icon" type="image/x-icon">
 <script type="text/javascript" src="jquery.js"></script>
@@ -83,7 +83,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('page_overview.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('dir_e68e8157741866f444e17edd764ebbae.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -101,56 +101,17 @@ $(document).ready(function(){initNavTree('page_overview.html',''); initResizable
 </iframe>
 </div>
 
-<div class="PageDoc"><div class="header">
+<div class="header">
   <div class="headertitle">
-<div class="title">Overview </div>  </div>
+<div class="title">doc Directory Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="OverviewIntro"></a>
-What is the Stack-Of-Tasks ?</h1>
-<p>The goal of the Stack-of-Tasks (SoT) is to provide a SDK in order to:</p><ul>
-<li>Write control problem for complex robots such as humanoid robots</li>
-<li>Test them quickly using geometric settings (rviz, gepetto-viewer), dynamic simulators (ODE,Bullet), system simulator (Gazebo)</li>
-<li>Deploy them in real robots (TALOS, HRP-2) Depending on your target you might not be interested in using the full set of software we are providing. But the main goal of this SDK is to consider a robot model \( RM \), its current state \( x \) and computes a control vector \(u \) to make the robot performs actions.</li>
-</ul>
-<p>All our controllers are defined as optimization problems. We are using either off-the-shelf solvers or our own solvers, depending of the targeted applications. The free variables are the control vector \( u \) to apply to the system. They are constraints which can be of several kinds: the mechanical constraints of the system with the environment, the behavior that we want the robot to follow. A short introduction on how those two constraints can be mathematically formulated can be found in controllers_information . We strongly recommend that you read it if you do not have a good grasp of robot control.</p>
-<h1><a class="anchor" id="InstallIntro"></a>
-Installation</h1>
-<p>It is recommended to install the Stack-Of-Tasks from binaries. This is strongly recommended if you are working on one of the robot currently supported: TALOS or Tiago. More information are given in the installation_detailed page.</p>
-<h2><a class="anchor" id="subsecInstallIntroBin"></a>
-Installing from binaries</h2>
-<p>We recommend to install from binaries using the robotpkg apt repository. It is planned to have some SoT core packages integrated in ROS Melodic around June 2020. More information are available in the <a class="el" href="c_installation_detailed.html#installation_detailed_from_binaries">Installation from binary packages</a> section.</p>
-<h2><a class="anchor" id="subsecInstallIntroSrc"></a>
-Installing from sources</h2>
-<p>This installation provides more flexibility but needs some good computer science skills. More information are available in the <a class="el" href="c_installation_detailed.html#installation_from_source">Installing from source</a> section.</p>
-<h1><a class="anchor" id="OrganizationIntro"></a>
-Organization</h1>
-<p>The SoT SDK is organized in packages in the following modules:</p><ul>
-<li>Core algorithmic libraries: They all can be used <em>WITHOUT</em> the other modules<ul>
-<li>pinocchio: A fast and flexible rigid body dynamic library implementing proper algebraic computation of mechanical quantities.</li>
-<li>tsid: A Task Space Inverse Dynamics library.</li>
-<li>jrl-walkgen: A library targed to make humanoid robot walks.</li>
-</ul>
-</li>
-<li>Modules to handle a dynamic graph of computational entities:<ul>
-<li>dynamic-graph: A C++ graph library allowing to build a graph of computational entities. This is not a middleware, it handles time dependencies.</li>
-<li>dynamic-graph-python: Python bindings to manage the dynamic-graph structure. Plus a C embedded python interpreter which can be used together with the C++ library for on-line graph modification</li>
-</ul>
-</li>
-<li>Solvers to generate control laws:<ul>
-<li>sot-core: Kinematics based solver. It is strongly based on the stack-of-taks paradigm and exposed several objects. This is has tested on several occasions and platforms and is allowing fast prototyping of robot motions.</li>
-<li>sot-dynamic-pinocchio: A sot-wrapper around pinocchio. This library exposes all the robot quantities (end-effectors position, CoM, mass matrix)</li>
-<li>sot-torque-control: A sot-wrapper around TSID.</li>
-<li>sot-pattern-generator: A sot-wrapper around jrl-walkgen. This library provides feet, waist, ZMP and CoM trajectories. </li>
-</ul>
-</li>
-</ul>
-</div></div><!-- contents -->
-</div><!-- PageDoc -->
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="dir_e68e8157741866f444e17edd764ebbae.html">doc</a></li>
     <li class="footer">Generated on Tue Apr 14 2020 08:38:17 for sot-doc by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>

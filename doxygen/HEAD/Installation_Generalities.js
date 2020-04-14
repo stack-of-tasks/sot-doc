@@ -16,7 +16,8 @@ var Installation_Generalities =
       [ "Core packages", "status_robotpkg_binaries.html#status_rpkg_binaries_core", null ],
       [ "Walking packages", "status_robotpkg_binaries.html#status_rpkg_binaries_walking", null ],
       [ "ROS packages", "status_robotpkg_binaries.html#status_rpkg_binaries_ros", null ],
-      [ "Robots packages", "status_robotpkg_binaries.html#status_rpkg_binaries_robots", null ]
+      [ "Robots packages", "status_robotpkg_binaries.html#status_rpkg_binaries_robots", null ],
+      [ "Finding the documentation on your machine", "status_robotpkg_binaries.html#status_robotpkg_binaries_doc_local", null ]
     ] ],
     [ "Using catkin tools and vcs for the SoT", "memo_catkin_tools.html", [
       [ "Introduction", "memo_catkin_tools.html#memo_catkin_tools_intro", [

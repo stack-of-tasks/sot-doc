@@ -4,11 +4,11 @@
     <name>page_overview</name>
     <title>Overview</title>
     <filename>page_overview</filename>
-    <docanchor file="page_overview" title="What is the Stack-Of-Tasks ?">OverviewIntro</docanchor>
-    <docanchor file="page_overview" title="Installation">InstallIntro</docanchor>
-    <docanchor file="page_overview" title="Installing from binaries">subsecInstallIntroBin</docanchor>
-    <docanchor file="page_overview" title="Installing from sources">subsecInstallIntroSrc</docanchor>
-    <docanchor file="page_overview" title="Organization">OrganizationIntro</docanchor>
+    <docanchor file="page_overview.html" title="What is the Stack-Of-Tasks ?">OverviewIntro</docanchor>
+    <docanchor file="page_overview.html" title="Installation">InstallIntro</docanchor>
+    <docanchor file="page_overview.html" title="Installing from binaries">subsecInstallIntroBin</docanchor>
+    <docanchor file="page_overview.html" title="Installing from sources">subsecInstallIntroSrc</docanchor>
+    <docanchor file="page_overview.html" title="Organization">OrganizationIntro</docanchor>
   </compound>
   <compound kind="page">
     <name>Installation_Generalities</name>
@@ -24,65 +24,66 @@
     <name>b_controllers_information</name>
     <title>Controllers formulation</title>
     <filename>b_controllers_information</filename>
-    <docanchor file="b_controllers_information" title="Necessary constraints">NecessaryConditions</docanchor>
-    <docanchor file="b_controllers_information" title="Dynamic modeling of a free-floating multi-body system">SubSecDynamicModeling</docanchor>
-    <docanchor file="b_controllers_information" title="Contact models">SubSecContactModels</docanchor>
-    <docanchor file="b_controllers_information" title="Functions used to generate a robot behavior">SecFunctions</docanchor>
-    <docanchor file="b_controllers_information" title="Formulating tasks">SubFuncFormulatingTasks</docanchor>
-    <docanchor file="b_controllers_information" title="Definition">subsubdef</docanchor>
-    <docanchor file="b_controllers_information" title="Imposing the task dynamic">subsubImposingTaskDyn</docanchor>
-    <docanchor file="b_controllers_information" title="Formulating instantaneous control as optimization problem">SubsectionFormulatingInstantaneousControl</docanchor>
+    <docanchor file="b_controllers_information.html" title="Necessary constraints">NecessaryConditions</docanchor>
+    <docanchor file="b_controllers_information.html" title="Dynamic modeling of a free-floating multi-body system">SubSecDynamicModeling</docanchor>
+    <docanchor file="b_controllers_information.html" title="Contact models">SubSecContactModels</docanchor>
+    <docanchor file="b_controllers_information.html" title="Functions used to generate a robot behavior">SecFunctions</docanchor>
+    <docanchor file="b_controllers_information.html" title="Formulating tasks">SubFuncFormulatingTasks</docanchor>
+    <docanchor file="b_controllers_information.html" title="Definition">subsubdef</docanchor>
+    <docanchor file="b_controllers_information.html" title="Imposing the task dynamic">subsubImposingTaskDyn</docanchor>
+    <docanchor file="b_controllers_information.html" title="Formulating instantaneous control as optimization problem">SubsectionFormulatingInstantaneousControl</docanchor>
   </compound>
   <compound kind="page">
     <name>c_installation_detailed</name>
     <title>Installation - Quick start</title>
     <filename>c_installation_detailed</filename>
-    <docanchor file="c_installation_detailed" title="Installation from binary packages">installation_detailed_from_binaries</docanchor>
-    <docanchor file="c_installation_detailed" title="Installing binaries - Quick start">installation_robotpkg</docanchor>
-    <docanchor file="c_installation_detailed" title="Status of the robotpkg binaries">installation_robotpkg_status</docanchor>
-    <docanchor file="c_installation_detailed" title="Installing from source">installation_from_source</docanchor>
-    <docanchor file="c_installation_detailed" title="Installing from robotpkg (to prepare an environment)">installation_from_source_robotpkg</docanchor>
-    <docanchor file="c_installation_detailed" title="Installing each package manually">installation_from_source_old_school</docanchor>
-    <docanchor file="c_installation_detailed" title="Installing from catkin (for development/experimental)">installation_from_source_catkin_build</docanchor>
-    <docanchor file="c_installation_detailed" title="Setting up your environment">d_setting_up_environment</docanchor>
+    <docanchor file="c_installation_detailed.html" title="Installation from binary packages">installation_detailed_from_binaries</docanchor>
+    <docanchor file="c_installation_detailed.html" title="Installing binaries - Quick start">installation_robotpkg</docanchor>
+    <docanchor file="c_installation_detailed.html" title="Status of the robotpkg binaries">installation_robotpkg_status</docanchor>
+    <docanchor file="c_installation_detailed.html" title="Installing from source">installation_from_source</docanchor>
+    <docanchor file="c_installation_detailed.html" title="Installing from robotpkg (to prepare an environment)">installation_from_source_robotpkg</docanchor>
+    <docanchor file="c_installation_detailed.html" title="Installing each package manually">installation_from_source_old_school</docanchor>
+    <docanchor file="c_installation_detailed.html" title="Installing from catkin (for development/experimental)">installation_from_source_catkin_build</docanchor>
+    <docanchor file="c_installation_detailed.html" title="Setting up your environment">d_setting_up_environment</docanchor>
   </compound>
   <compound kind="page">
     <name>status_robotpkg_binaries</name>
     <title>Status of the robotpkg binaries</title>
     <filename>status_robotpkg_binaries</filename>
-    <docanchor file="status_robotpkg_binaries" title="Core packages">status_rpkg_binaries_core</docanchor>
-    <docanchor file="status_robotpkg_binaries" title="Walking packages">status_rpkg_binaries_walking</docanchor>
-    <docanchor file="status_robotpkg_binaries" title="ROS packages">status_rpkg_binaries_ros</docanchor>
-    <docanchor file="status_robotpkg_binaries" title="Robots packages">status_rpkg_binaries_robots</docanchor>
+    <docanchor file="status_robotpkg_binaries.html" title="Core packages">status_rpkg_binaries_core</docanchor>
+    <docanchor file="status_robotpkg_binaries.html" title="Walking packages">status_rpkg_binaries_walking</docanchor>
+    <docanchor file="status_robotpkg_binaries.html" title="ROS packages">status_rpkg_binaries_ros</docanchor>
+    <docanchor file="status_robotpkg_binaries.html" title="Robots packages">status_rpkg_binaries_robots</docanchor>
+    <docanchor file="status_robotpkg_binaries.html" title="Finding the documentation on your machine">status_robotpkg_binaries_doc_local</docanchor>
   </compound>
   <compound kind="page">
     <name>memo_catkin_tools</name>
     <title>Using catkin tools and vcs for the SoT</title>
     <filename>memo_catkin_tools</filename>
-    <docanchor file="memo_catkin_tools" title="Introduction">memo_catkin_tools_intro</docanchor>
-    <docanchor file="memo_catkin_tools" title="Quick start">memo_catkin_tools_quick_start</docanchor>
-    <docanchor file="memo_catkin_tools" title="Install dependencies">memo_catkin_tools_quick_start_depends</docanchor>
-    <docanchor file="memo_catkin_tools" title="Setup your environment">memo_catkin_tools_quick_start_setnv</docanchor>
-    <docanchor file="memo_catkin_tools" title="Create your workspace">_catkin_tools_quick_create_ws</docanchor>
-    <docanchor file="memo_catkin_tools" title="Quick start explanations">memto_catkin_tools_quick_start_explanations</docanchor>
-    <docanchor file="memo_catkin_tools" title="Handling the repositories (VCS)">memo_catkin_tools_vcs</docanchor>
-    <docanchor file="memo_catkin_tools" title="Checking out the SoT infra-structure">memo_catkin_tools_vcs_checkingout</docanchor>
-    <docanchor file="memo_catkin_tools" title="Getting the current status of the repos">memo_catkin_tools_vcs_status</docanchor>
-    <docanchor file="memo_catkin_tools" title="Compiling and testing the packages (catkin)">memo_catkin_tools_compiling</docanchor>
-    <docanchor file="memo_catkin_tools" title="Setting the cmake args">memo_catkin_tools_compiling_settings</docanchor>
-    <docanchor file="memo_catkin_tools" title="Compiling">memo_catkin_tools_compiling_compiling</docanchor>
-    <docanchor file="memo_catkin_tools" title="Compiling everything">memo_catkin_tools_compiling_all</docanchor>
-    <docanchor file="memo_catkin_tools" title="Compiling a specific package with its dependencies">memo_catkin_tools_compiling_a_pkg</docanchor>
-    <docanchor file="memo_catkin_tools" title="Compiling a specific package without its dependencies">memo_catkin_tools_compiling_a_pkg_nodeps</docanchor>
-    <docanchor file="memo_catkin_tools" title="Generating the documentation">memo_catkin_tools_compiling_a_pkg_doc</docanchor>
-    <docanchor file="memo_catkin_tools" title="Clean all the build part">memo_catkin_tools_clean_all</docanchor>
-    <docanchor file="memo_catkin_tools" title="Running tests">memo_catkin_tools_run_tests</docanchor>
-    <docanchor file="memo_catkin_tools" title="Computing coverage">memo_catkin_tools_compute_coverage</docanchor>
-    <docanchor file="memo_catkin_tools" title="Installing dependencies">memo_preparing_environment</docanchor>
-    <docanchor file="memo_catkin_tools" title="Quick start">subsec_preparing_env_from_rpkg_bash</docanchor>
-    <docanchor file="memo_catkin_tools" title="Robotpkg Only">subsec_preparing_env_from_rpkg_only</docanchor>
-    <docanchor file="memo_catkin_tools" title="Robotpkg helpers repository">subsec_preparing_env_from_rpkg_helpers</docanchor>
-    <docanchor file="memo_catkin_tools" title="Chaining workspaces">subsec_preparing_env_chaining_ws</docanchor>
+    <docanchor file="memo_catkin_tools.html" title="Introduction">memo_catkin_tools_intro</docanchor>
+    <docanchor file="memo_catkin_tools.html" title="Quick start">memo_catkin_tools_quick_start</docanchor>
+    <docanchor file="memo_catkin_tools.html" title="Install dependencies">memo_catkin_tools_quick_start_depends</docanchor>
+    <docanchor file="memo_catkin_tools.html" title="Setup your environment">memo_catkin_tools_quick_start_setnv</docanchor>
+    <docanchor file="memo_catkin_tools.html" title="Create your workspace">_catkin_tools_quick_create_ws</docanchor>
+    <docanchor file="memo_catkin_tools.html" title="Quick start explanations">memto_catkin_tools_quick_start_explanations</docanchor>
+    <docanchor file="memo_catkin_tools.html" title="Handling the repositories (VCS)">memo_catkin_tools_vcs</docanchor>
+    <docanchor file="memo_catkin_tools.html" title="Checking out the SoT infra-structure">memo_catkin_tools_vcs_checkingout</docanchor>
+    <docanchor file="memo_catkin_tools.html" title="Getting the current status of the repos">memo_catkin_tools_vcs_status</docanchor>
+    <docanchor file="memo_catkin_tools.html" title="Compiling and testing the packages (catkin)">memo_catkin_tools_compiling</docanchor>
+    <docanchor file="memo_catkin_tools.html" title="Setting the cmake args">memo_catkin_tools_compiling_settings</docanchor>
+    <docanchor file="memo_catkin_tools.html" title="Compiling">memo_catkin_tools_compiling_compiling</docanchor>
+    <docanchor file="memo_catkin_tools.html" title="Compiling everything">memo_catkin_tools_compiling_all</docanchor>
+    <docanchor file="memo_catkin_tools.html" title="Compiling a specific package with its dependencies">memo_catkin_tools_compiling_a_pkg</docanchor>
+    <docanchor file="memo_catkin_tools.html" title="Compiling a specific package without its dependencies">memo_catkin_tools_compiling_a_pkg_nodeps</docanchor>
+    <docanchor file="memo_catkin_tools.html" title="Generating the documentation">memo_catkin_tools_compiling_a_pkg_doc</docanchor>
+    <docanchor file="memo_catkin_tools.html" title="Clean all the build part">memo_catkin_tools_clean_all</docanchor>
+    <docanchor file="memo_catkin_tools.html" title="Running tests">memo_catkin_tools_run_tests</docanchor>
+    <docanchor file="memo_catkin_tools.html" title="Computing coverage">memo_catkin_tools_compute_coverage</docanchor>
+    <docanchor file="memo_catkin_tools.html" title="Installing dependencies">memo_preparing_environment</docanchor>
+    <docanchor file="memo_catkin_tools.html" title="Quick start">subsec_preparing_env_from_rpkg_bash</docanchor>
+    <docanchor file="memo_catkin_tools.html" title="Robotpkg Only">subsec_preparing_env_from_rpkg_only</docanchor>
+    <docanchor file="memo_catkin_tools.html" title="Robotpkg helpers repository">subsec_preparing_env_from_rpkg_helpers</docanchor>
+    <docanchor file="memo_catkin_tools.html" title="Chaining workspaces">subsec_preparing_env_chaining_ws</docanchor>
   </compound>
   <compound kind="page">
     <name>z_citing_the_robot</name>
@@ -93,6 +94,6 @@
     <name>examples_using_sot</name>
     <title>Examples of control infra structure using the SoT</title>
     <filename>examples_using_sot</filename>
-    <docanchor file="examples_using_sot" title="Max-Planck-Institute">ex_usage_mpi</docanchor>
+    <docanchor file="examples_using_sot.html" title="Max-Planck-Institute">ex_usage_mpi</docanchor>
   </compound>
 </tagfile>

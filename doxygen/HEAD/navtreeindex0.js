@@ -57,6 +57,7 @@ var NAVTREEINDEX0 =
 "page_overview.html#subsecInstallIntroSrc":[0,1,1],
 "pages.html":[],
 "status_robotpkg_binaries.html":[1,1],
+"status_robotpkg_binaries.html#status_robotpkg_binaries_doc_local":[1,1,4],
 "status_robotpkg_binaries.html#status_rpkg_binaries_core":[1,1,0],
 "status_robotpkg_binaries.html#status_rpkg_binaries_robots":[1,1,3],
 "status_robotpkg_binaries.html#status_rpkg_binaries_ros":[1,1,2],
