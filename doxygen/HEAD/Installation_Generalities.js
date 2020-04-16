@@ -11,6 +11,7 @@ var Installation_Generalities =
         [ "Installing from catkin (for development/experimental)", "c_installation_detailed.html#installation_from_source_catkin_build", null ]
       ] ]
     ] ],
+    [ "Setting up your environment", "d_setting_up_environment.html", null ],
     [ "Status of the robotpkg binaries", "status_robotpkg_binaries.html", [
       [ "Core packages", "status_robotpkg_binaries.html#status_rpkg_binaries_core", null ],
       [ "Walking packages", "status_robotpkg_binaries.html#status_rpkg_binaries_walking", null ],

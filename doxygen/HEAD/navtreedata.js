@@ -24,7 +24,6 @@ var NAVTREE =
         [ "Formulating instantaneous control as optimization problem", "b_controllers_information.html#SubsectionFormulatingInstantaneousControl", null ]
       ] ]
     ] ],
-    [ "Setting up your environment", "d_setting_up_environment.html", null ],
     [ "Citing the SoT", "z_citing_the_robot.html", null ],
     [ "Bibliography", "citelist.html", null ]
   ] ]
