@@ -49,6 +49,19 @@ verboseinfo()
     echo "rpkg_path: $rpkg_path"
 }
 
+# Checking which Ubuntu is used
+checking_ubuntu_release()
+{
+    if [ -f /etc/lsb-release ]; then
+        (. /etc/lsb-release; 
+         echo "#!/bin/bash" > /tmp/local.bash
+         echo "export DISTRIB_CODENAME="$DISTRIB_CODENAME >> /tmp/local.bash;
+         echo "export DISTRIB_RELEASE="$DISTRIB_RELEASE >> /tmp/local.bash;
+         echo "export DISTRIB_DESCRIPTION=\""$DISTRIB_DESCRIPTION\" >> /tmp/local.bash;)
+        source /tmp/local.bash
+    fi
+}
+
 # Check if pinocchio is available through pkg-config
 checking_pinocchio_pkg_config()
 {
@@ -71,19 +84,26 @@ checking_if_a_command_is_installed()
     if type $1 >/dev/null 2>&1; then
         echo "${green}Found $1 ${std}"
     else
-        echo "${red}$1 not present${std}: apt install $2"
+        echo "${red}$1 not present${std}: sudo apt install $2"
+        exit 127
     fi
 }
 
-executable_names=( "vcs" "wget" "catkin" )
-package_names=( "python3-vcstool" "wget" "python-catkin-tools" )
 
 # Checking if all the commands are installed
 checking_if_commands_are_installed()
 {
-    echo "* ${purple}[$id_step/$nb_steps]${std} Check if commands are installed"
+    if [ $DISTRIB_RELEASE == "20.04" ]; then
+        executable_names=( "vcs" "wget" "colcon" )
+        package_names=( "python3-vcstool" "wget" "python3-colcon-ros" )        
+    else
+        executable_names=( "vcs" "wget" "catkin" )
+        package_names=( "python3-vcstool" "wget" "python-catkin-tools" )
+    fi
+    
+    echo "* ${purple}[$id_step/$nb_steps]${std} Check if commands are installed "
     for i in  ${!executable_names[@]}; do
-        checking_if_a_command_is_installed ${executable_names[$i]} ${packages_names[$i]}
+        checking_if_a_command_is_installed ${executable_names[$i]} ${package_names[$i]}
     done
     id_step=$((id_step+1))
 }
@@ -162,12 +182,24 @@ if [ -z "$rpkg_path" ]; then
 fi
 
 # Main starts from here
+
+# Verify which ubuntu is used
+checking_ubuntu_release
+
+# Verify if the needed commands are installed
 checking_if_commands_are_installed
 
+# Checking if pinocchio is present through pkg_config
 checking_pinocchio_pkg_config
 
+
+# Perform the work
+
+# Create the SoT work space
 prepare_sot_ws_directory
 
+# Pull the repos
 get_sot_repos
 
+# Configure the worskpace
 configure_catkin
