@@ -16,9 +16,8 @@ jobs:
     - name: configure
       run: cmake .
     - name: make doc
-      uses: mattnotmitt/doxygen-action@v1
-      with:
-        doxyfile-path: 'doc/Doxyfile'
+      shell: bash
+      run: make doc
     - name: Build and Deploy GH Pages
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
