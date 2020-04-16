@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
-<title>sot-doc: Related Pages</title>
+<title>sot-doc: Setting up your environment</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="pinocchio.ico" rel="icon" type="image/x-icon">
 <script type="text/javascript" src="jquery.js"></script>
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('pages.html','');});
+$(document).ready(function(){initNavTree('d_setting_up_environment.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -99,25 +99,23 @@ $(document).ready(function(){initNavTree('pages.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Related Pages</div>  </div>
+<div class="title">Setting up your environment </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all related documentation pages:</div><div class="directory">
-<div class="levels">[detail level <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span>]</div><table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="page_overview.html" target="_self">Overview</a></td><td class="desc"></td></tr>
-<tr id="row_1_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_1_" class="arrow" onclick="toggleFolder('1_')">&#9660;</span><a class="el" href="Installation_Generalities.html" target="_self">Installation</a></td><td class="desc"></td></tr>
-<tr id="row_1_0_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="c_installation_detailed.html" target="_self">Installation - Quick start</a></td><td class="desc"></td></tr>
-<tr id="row_1_1_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="status_robotpkg_binaries.html" target="_self">Status of the robotpkg binaries</a></td><td class="desc"></td></tr>
-<tr id="row_1_2_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="memo_catkin_tools.html" target="_self">Using catkin tools and vcs for the SoT</a></td><td class="desc"></td></tr>
-<tr id="row_2_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_2_" class="arrow" onclick="toggleFolder('2_')">&#9660;</span><a class="el" href="Usage_Examples.html" target="_self">Usage examples</a></td><td class="desc"></td></tr>
-<tr id="row_2_0_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="examples_using_sot.html" target="_self">Examples of control infra structure using the SoT</a></td><td class="desc"></td></tr>
-<tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="b_controllers_information.html" target="_self">Controllers formulation</a></td><td class="desc"></td></tr>
-<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="d_setting_up_environment.html" target="_self">Setting up your environment</a></td><td class="desc"></td></tr>
-<tr id="row_5_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="z_citing_the_robot.html" target="_self">Citing the SoT</a></td><td class="desc"></td></tr>
-<tr id="row_6_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="citelist.html" target="_self">Bibliography</a></td><td class="desc"></td></tr>
-</table>
-</div><!-- directory -->
-</div><!-- contents -->
+<div class="textblock"><p>To setup the environment variables you can use the script <a href="https://github.com/stack-of-tasks/sot-doc/blob/master/bash/setup-opt-testrobotpkgarg.sh">setup-opt-testrobotpkgarg.sh</a></p>
+<p>This will set the following environment variables according to the argument:</p><ul>
+<li>CMAKE_PREFIX_PATH</li>
+<li>LD_LIBRARY_PATH</li>
+<li>PATH</li>
+<li>PKG_CONFIG_PATH</li>
+<li>PYTHON_PATH</li>
+<li>ROBOTPKG_BASE</li>
+<li>ROS_PACKAGE_PATH</li>
+</ul>
+<p>To use it with the binary packages installed in /opt/openrobots: </p><pre class="fragment">source setup-opt-testrobotpkgarg.sh -p /opt/openrobots -r
+</pre><p>Once you typed this command you can check that the previous variables have the string "/opt/openrobots". The order set the priority.</p>
+<p>The directory /opt/openrobots will have the highest priority with respect to all the precited variables. This equivalent to workspace chaining in ROS.</p>
+<p>It is recommended to handle this with aliases in your .bashrc file. You can for instance add the following line to your .bash_aliases </p><pre class="fragment">alias sop="source setup-opt-testrobotpkgarg.sh -p /opt/openrobots -r"</pre> </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

@@ -12,7 +12,6 @@ var NAVTREEINDEX0 =
 "b_controllers_information.html#subsubImposingTaskDyn":[3,1,0,1],
 "b_controllers_information.html#subsubdef":[3,1,0,0],
 "c_installation_detailed.html":[1,0],
-"c_installation_detailed.html#d_setting_up_environment":[1,0,2],
 "c_installation_detailed.html#installation_detailed_from_binaries":[1,0,0],
 "c_installation_detailed.html#installation_from_source":[1,0,1],
 "c_installation_detailed.html#installation_from_source_catkin_build":[1,0,1,2],
@@ -20,7 +19,8 @@ var NAVTREEINDEX0 =
 "c_installation_detailed.html#installation_from_source_robotpkg":[1,0,1,0],
 "c_installation_detailed.html#installation_robotpkg":[1,0,0,0],
 "c_installation_detailed.html#installation_robotpkg_status":[1,0,0,1],
-"citelist.html":[5],
+"citelist.html":[6],
+"d_setting_up_environment.html":[4],
 "examples_using_sot.html":[2,0],
 "examples_using_sot.html#ex_usage_mpi":[2,0,0],
 "index.html":[],
@@ -62,5 +62,5 @@ var NAVTREEINDEX0 =
 "status_robotpkg_binaries.html#status_rpkg_binaries_robots":[1,1,3],
 "status_robotpkg_binaries.html#status_rpkg_binaries_ros":[1,1,2],
 "status_robotpkg_binaries.html#status_rpkg_binaries_walking":[1,1,1],
-"z_citing_the_robot.html":[4]
+"z_citing_the_robot.html":[5]
 };

@@ -9,8 +9,7 @@ var Installation_Generalities =
         [ "Installing from robotpkg (to prepare an environment)", "c_installation_detailed.html#installation_from_source_robotpkg", null ],
         [ "Installing each package manually", "c_installation_detailed.html#installation_from_source_old_school", null ],
         [ "Installing from catkin (for development/experimental)", "c_installation_detailed.html#installation_from_source_catkin_build", null ]
-      ] ],
-      [ "Setting up your environment", "c_installation_detailed.html#d_setting_up_environment", null ]
+      ] ]
     ] ],
     [ "Status of the robotpkg binaries", "status_robotpkg_binaries.html", [
       [ "Core packages", "status_robotpkg_binaries.html#status_rpkg_binaries_core", null ],
