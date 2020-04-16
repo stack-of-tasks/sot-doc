@@ -2,6 +2,7 @@
 */
 /** \page Installation_Generalities Installation
     - \subpage c_installation_detailed
+    - \subpage d_setting_up_environment
     - \subpage status_robotpkg_binaries
     - \subpage memo_catkin_tools
 */
