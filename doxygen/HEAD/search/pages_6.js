@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['using_20catkin_20tools_20and_20vcs_20for_20the_20sot',['Using catkin tools and vcs for the SoT',['../memo_catkin_tools.html',1,'Installation_Generalities']]],
-  ['usage_20examples',['Usage examples',['../Usage_Examples.html',1,'']]]
+  ['setting_20up_20your_20environment',['Setting up your environment',['../d_setting_up_environment.html',1,'Installation_Generalities']]],
+  ['status_20of_20the_20robotpkg_20binaries',['Status of the robotpkg binaries',['../status_robotpkg_binaries.html',1,'Installation_Generalities']]]
 ];

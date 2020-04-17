@@ -10,6 +10,7 @@ var NAVTREE =
       [ "Organization", "page_overview.html#OrganizationIntro", null ]
     ] ],
     [ "Installation", "Installation_Generalities.html", "Installation_Generalities" ],
+    [ "Tutorials", "Tutorials_Pages.html", "Tutorials_Pages" ],
     [ "Usage examples", "Usage_Examples.html", "Usage_Examples" ],
     [ "Controllers formulation", "b_controllers_information.html", [
       [ "Necessary constraints", "b_controllers_information.html#NecessaryConditions", [

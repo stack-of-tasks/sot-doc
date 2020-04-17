@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['installation_20_2d_20quick_20start',['Installation - Quick start',['../c_installation_detailed.html',1,'Installation_Generalities']]],
-  ['installation',['Installation',['../Installation_Generalities.html',1,'']]]
+  ['examples_20of_20control_20infra_20structure_20using_20the_20sot',['Examples of control infra structure using the SoT',['../examples_using_sot.html',1,'Usage_Examples']]]
 ];

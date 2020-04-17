@@ -16,6 +16,11 @@
     <filename>Installation_Generalities</filename>
   </compound>
   <compound kind="page">
+    <name>Tutorials_Pages</name>
+    <title>Tutorials</title>
+    <filename>Tutorials_Pages</filename>
+  </compound>
+  <compound kind="page">
     <name>Usage_Examples</name>
     <title>Usage examples</title>
     <filename>Usage_Examples</filename>
@@ -49,6 +54,9 @@
     <name>d_setting_up_environment</name>
     <title>Setting up your environment</title>
     <filename>d_setting_up_environment</filename>
+    <docanchor file="d_setting_up_environment" title="Shell file">setting_up_env_shell_file</docanchor>
+    <docanchor file="d_setting_up_environment" title="Important environment variables">setting_up_env_variables</docanchor>
+    <docanchor file="d_setting_up_environment" title="Modification of your configuration">setting_up_env_conf</docanchor>
   </compound>
   <compound kind="page">
     <name>status_robotpkg_binaries</name>
@@ -88,6 +96,27 @@
     <docanchor file="memo_catkin_tools" title="Robotpkg Only">subsec_preparing_env_from_rpkg_only</docanchor>
     <docanchor file="memo_catkin_tools" title="Robotpkg helpers repository">subsec_preparing_env_from_rpkg_helpers</docanchor>
     <docanchor file="memo_catkin_tools" title="Chaining workspaces">subsec_preparing_env_chaining_ws</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>tutorial_first</name>
+    <title>Dynamic-graph 101</title>
+    <filename>tutorial_first</filename>
+    <docanchor file="tutorial_first" title="Introduction">tutorial_first_introduction</docanchor>
+    <docanchor file="tutorial_first" title="First steps with dynamic graph">tutorial_dyngrp_101</docanchor>
+    <docanchor file="tutorial_first" title="Dynamic-graph operations">tutorials_dyngrp_operations</docanchor>
+    <docanchor file="tutorial_first" title="Entity manipulation">tutorial_first_entity</docanchor>
+    <docanchor file="tutorial_first" title="Signal manipulation">tutorial_first_signal_manipulation</docanchor>
+    <docanchor file="tutorial_first" title="Going further">tutorial_going_further</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>tutorial_snd</name>
+    <title>Whole body motion</title>
+    <filename>tutorial_snd</filename>
+    <docanchor file="tutorial_snd" title="Introduction">tutorial_snd_introduction</docanchor>
+    <docanchor file="tutorial_snd" title="For Melodic">tutorial_snd_introduction_melodic</docanchor>
+    <docanchor file="tutorial_snd" title="For Kinetic">tutorial_snd_introduction_kinetic</docanchor>
+    <docanchor file="tutorial_snd" title="Scripted whole body motion">tutorial_snd_whole_body_motion</docanchor>
+    <docanchor file="tutorial_snd" title="Explanations">tutorial_snd_detailed_explanations</docanchor>
   </compound>
   <compound kind="page">
     <name>z_citing_the_robot</name>

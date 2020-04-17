@@ -11,7 +11,11 @@ var Installation_Generalities =
         [ "Installing from catkin (for development/experimental)", "c_installation_detailed.html#installation_from_source_catkin_build", null ]
       ] ]
     ] ],
-    [ "Setting up your environment", "d_setting_up_environment.html", null ],
+    [ "Setting up your environment", "d_setting_up_environment.html", [
+      [ "Shell file", "d_setting_up_environment.html#setting_up_env_shell_file", null ],
+      [ "Important environment variables", "d_setting_up_environment.html#setting_up_env_variables", null ],
+      [ "Modification of your configuration", "d_setting_up_environment.html#setting_up_env_conf", null ]
+    ] ],
     [ "Status of the robotpkg binaries", "status_robotpkg_binaries.html", [
       [ "Core packages", "status_robotpkg_binaries.html#status_rpkg_binaries_core", null ],
       [ "Walking packages", "status_robotpkg_binaries.html#status_rpkg_binaries_walking", null ],
