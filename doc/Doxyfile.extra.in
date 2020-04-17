@@ -298,6 +298,8 @@ INPUT                 = @CMAKE_SOURCE_DIR@/doc/main.dox \
                         @CMAKE_SOURCE_DIR@/doc/SettingYourEnvironment.md \                        
                         @CMAKE_SOURCE_DIR@/doc/StateRobotpkgBinaries.md \
                         @CMAKE_SOURCE_DIR@/doc/CatkinBuildTools.md \
+                        @CMAKE_SOURCE_DIR@/doc/Tutorial_01.md \
+                        @CMAKE_SOURCE_DIR@/doc/Tutorial_02.md \
                         @CMAKE_SOURCE_DIR@/doc/Citing.md \
                         @CMAKE_SOURCE_DIR@/doc/Examples.md
                         

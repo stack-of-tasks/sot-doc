@@ -6,6 +6,11 @@
     - \subpage status_robotpkg_binaries
     - \subpage memo_catkin_tools
 */
+/** \page Tutorials_Pages Tutorials
+    - \subpage tutorial_first
+    - \subpage tutorial_snd
+*/
+
 
 /** \page Usage_Examples Usage examples
     - \subpage examples_using_sot
