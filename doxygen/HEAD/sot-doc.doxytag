@@ -98,25 +98,32 @@
     <docanchor file="memo_catkin_tools" title="Chaining workspaces">subsec_preparing_env_chaining_ws</docanchor>
   </compound>
   <compound kind="page">
-    <name>tutorial_first</name>
+    <name>tutorial_dyn_graph_101</name>
     <title>Dynamic-graph 101</title>
-    <filename>tutorial_first</filename>
-    <docanchor file="tutorial_first" title="Introduction">tutorial_first_introduction</docanchor>
-    <docanchor file="tutorial_first" title="First steps with dynamic graph">tutorial_dyngrp_101</docanchor>
-    <docanchor file="tutorial_first" title="Dynamic-graph operations">tutorials_dyngrp_operations</docanchor>
-    <docanchor file="tutorial_first" title="Entity manipulation">tutorial_first_entity</docanchor>
-    <docanchor file="tutorial_first" title="Signal manipulation">tutorial_first_signal_manipulation</docanchor>
-    <docanchor file="tutorial_first" title="Going further">tutorial_going_further</docanchor>
+    <filename>tutorial_dyn_graph_101</filename>
+    <docanchor file="tutorial_dyn_graph_101" title="Introduction">tutorial_first_introduction</docanchor>
+    <docanchor file="tutorial_dyn_graph_101" title="First steps with dynamic graph">tutorial_dyngrp_101</docanchor>
+    <docanchor file="tutorial_dyn_graph_101" title="Dynamic-graph operations">tutorials_dyngrp_operations</docanchor>
+    <docanchor file="tutorial_dyn_graph_101" title="Entity manipulation">tutorial_first_entity</docanchor>
+    <docanchor file="tutorial_dyn_graph_101" title="Signal manipulation">tutorial_first_signal_manipulation</docanchor>
+    <docanchor file="tutorial_dyn_graph_101" title="Going further">tutorial_going_further</docanchor>
   </compound>
   <compound kind="page">
-    <name>tutorial_snd</name>
+    <name>tutorial_whole_body_motion</name>
     <title>Whole body motion</title>
-    <filename>tutorial_snd</filename>
-    <docanchor file="tutorial_snd" title="Introduction">tutorial_snd_introduction</docanchor>
-    <docanchor file="tutorial_snd" title="For Melodic">tutorial_snd_introduction_melodic</docanchor>
-    <docanchor file="tutorial_snd" title="For Kinetic">tutorial_snd_introduction_kinetic</docanchor>
-    <docanchor file="tutorial_snd" title="Scripted whole body motion">tutorial_snd_whole_body_motion</docanchor>
-    <docanchor file="tutorial_snd" title="Explanations">tutorial_snd_detailed_explanations</docanchor>
+    <filename>tutorial_whole_body_motion</filename>
+    <docanchor file="tutorial_whole_body_motion" title="Introduction">tutorial_snd_introduction</docanchor>
+    <docanchor file="tutorial_whole_body_motion" title="For Melodic">tutorial_snd_introduction_melodic</docanchor>
+    <docanchor file="tutorial_whole_body_motion" title="For Kinetic">tutorial_snd_introduction_kinetic</docanchor>
+    <docanchor file="tutorial_whole_body_motion" title="Scripted whole body motion">tutorial_snd_whole_body_motion</docanchor>
+    <docanchor file="tutorial_whole_body_motion" title="Explanations">tutorial_snd_detailed_explanations</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>tutorial_ros_bridge</name>
+    <title>ROS Bridge with SoT</title>
+    <filename>tutorial_ros_bridge</filename>
+    <docanchor file="tutorial_ros_bridge" title="Signal to ROS topic">tutorial_ros_bridge_sig_to_topic</docanchor>
+    <docanchor file="tutorial_ros_bridge" title="ROS tf to signal">tutorial_ros_bridge_topic_to_sig</docanchor>
   </compound>
   <compound kind="page">
     <name>z_citing_the_robot</name>

@@ -107,14 +107,22 @@ Shell file</h1>
 <p>To setup the environment variables you can use the script <a href="https://github.com/stack-of-tasks/sot-doc/blob/master/bash/setup-opt-testrobotpkgarg.sh">setup-opt-testrobotpkgarg.sh</a></p>
 <h1><a class="anchor" id="setting_up_env_variables"></a>
 Important environment variables</h1>
-<p>This will set the following environment variables according to the argument:</p><ul>
-<li>CMAKE_PREFIX_PATH</li>
-<li>LD_LIBRARY_PATH</li>
-<li>PATH</li>
-<li>PKG_CONFIG_PATH</li>
-<li>PYTHON_PATH</li>
-<li>ROBOTPKG_BASE</li>
-<li>ROS_PACKAGE_PATH</li>
+<p>This will set the following environment variables according to the argument:</p>
+<ul>
+<li>CMAKE_PREFIX_PATH <br />
+ This variable specifies the directory where cmake is searching for libraries CMake target. It is also use by ROS to search for executables.</li>
+<li>LD_LIBRARY_PATH <br />
+ Path to libraries.</li>
+<li>PATH <br />
+ Path of the binaries.</li>
+<li>PKG_CONFIG_PATH <br />
+ Paths to find the .pc files describing compilation flags and libraries. This is currently being deprecated for CMake export rules.</li>
+<li>PYTHON_PATH <br />
+ Paths to find python modules. SoT install modules in site-packages directory (Python convention) instead of dist-packges (Ubuntu convention).</li>
+<li>ROBOTPKG_BASE <br />
+ Path where robotpkg is installed.</li>
+<li>ROS_PACKAGE_PATH <br />
+ Path where ROS packages are installed</li>
 </ul>
 <h1><a class="anchor" id="setting_up_env_conf"></a>
 Modification of your configuration</h1>
@@ -126,7 +134,7 @@ Modification of your configuration</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Apr 17 2020 08:03:22 for sot-doc by
+    <li class="footer">Generated on Sat Apr 18 2020 11:40:39 for sot-doc by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

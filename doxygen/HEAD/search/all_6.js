@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['setting_20up_20your_20environment',['Setting up your environment',['../d_setting_up_environment.html',1,'Installation_Generalities']]],
-  ['status_20of_20the_20robotpkg_20binaries',['Status of the robotpkg binaries',['../status_robotpkg_binaries.html',1,'Installation_Generalities']]]
+  ['ros_20bridge_20with_20sot',['ROS Bridge with SoT',['../tutorial_ros_bridge.html',1,'Tutorials_Pages']]]
 ];
