@@ -1,4 +1,4 @@
-# Whole body motion {#tutorial_snd}
+# Whole body motion {#tutorial_whole_body_motion}
 
 \section tutorial_snd_introduction Introduction
 

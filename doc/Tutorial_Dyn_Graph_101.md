@@ -1,4 +1,4 @@
-# Dynamic-graph 101 {#tutorial_first}
+# Dynamic-graph 101 {#tutorial_dyn_graph_101}
 
 \section  tutorial_first_introduction Introduction
 

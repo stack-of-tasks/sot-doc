@@ -7,8 +7,9 @@
     - \subpage memo_catkin_tools
 */
 /** \page Tutorials_Pages Tutorials
-    - \subpage tutorial_first
-    - \subpage tutorial_snd
+    - \subpage tutorial_dyn_graph_101
+    - \subpage tutorial_whole_body_motion
+    - \subpage tutorial_ros_bridge
 */
 
 
