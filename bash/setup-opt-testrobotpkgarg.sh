@@ -4,6 +4,7 @@
 
 rpkg_priority=0
 ros_reset=0
+detected_robotpkg=0
 
 usage()
 {
@@ -19,6 +20,19 @@ verboseinfo()
     echo "Robotpkg priority: $rpkg_priority"
     echo "ROS_PACKAGE_PATH: $ROS_PACKAGE_PATH"
     echo "rpkg_path: $rpkg_path"
+}
+
+setting_robotpkg_base()
+{
+    detected_robotpkg_ok=1
+    # Test if candidate_value/var/db/robotpkg exists
+    if [ ! -d $1/var/db/robotpkg ]; then
+        detected_robotpkg_ok=0
+    fi
+
+    if [ $detected_robotpkg_ok -eq 1 ]; then
+        export ROBOTPKG_BASE=$1
+    fi
 }
 
 # Dealing with parameters
@@ -82,28 +96,27 @@ if [ -f /usr/share/gazebo-9/setup.sh ]; then
     source /usr/share/gazebo-9/setup.sh
 fi
 
+setting_robotpkg_base ${rpkg_path}
+
 if [ $rpkg_priority -eq 1 ];
 then
-  export ROBOTPKG_BASE=$rpkg_path
-  export PATH=$ROBOTPKG_BASE/sbin:$ROBOTPKG_BASE/bin:$PATH
-  export LD_LIBRARY_PATH=$ROBOTPKG_BASE/lib:$ROBOTPKG_BASE/lib/dynamic-graph-plugins:$ROBOTPKG_BASE/lib64:$LD_LIBRARY_PATH
-  export PYTHONPATH=$ROBOTPKG_BASE/lib/python2.7/site-packages:$PYTHONPATH
-  export PKG_CONFIG_PATH=$ROBOTPKG_BASE/lib/pkgconfig/:$PKG_CONFIG_PATH
-  export ROS_PACKAGE_PATH=$ROBOTPKG_BASE/share:$ROS_PACKAGE_PATH
-  export CMAKE_PREFIX_PATH=$ROBOTPKG_BASE:$CMAKE_PREFIX_PATH
-  export GAZEBO_MODEL_PATH=$ROBOTPKG_BASE/share/pal_gazebo_worlds/models:$GAZEBO_MODEL_PATH
+  export PATH=$rpkg_path/sbin:$rpkg_path/bin:$PATH
+  export LD_LIBRARY_PATH=$rpkg_path/lib:$rpkg_path/lib/dynamic-graph-plugins:$rpkg_path/lib64:$LD_LIBRARY_PATH
+  export PYTHONPATH=$rpkg_path/lib/python2.7/site-packages:$PYTHONPATH
+  export PKG_CONFIG_PATH=$rpkg_path/lib/pkgconfig/:$PKG_CONFIG_PATH
+  export ROS_PACKAGE_PATH=$rpkg_path/share:$ROS_PACKAGE_PATH
+  export CMAKE_PREFIX_PATH=$rpkg_path:$CMAKE_PREFIX_PATH
+  export GAZEBO_MODEL_PATH=$rpkg_path/share/pal_gazebo_worlds/models:$GAZEBO_MODEL_PATH
   export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:/opt/openrobots/lib
-  export GAZEBO_RESOURCE_PATH=$ROBOTPKG_BASE/share/pal_gazebo_worlds:/usr/share/gazebo-9:$GAZEBO_RESOURCE_PATH
+  export GAZEBO_RESOURCE_PATH=$rpkg_path/share/pal_gazebo_worlds:/usr/share/gazebo-9:$GAZEBO_RESOURCE_PATH
 else
-  export ROBOTPKG_BASE=$rpkg_path
-  export PATH=$PATH:$ROBOTPKG_BASE/sbin:$ROBOTPKG_BASE/bin
-  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ROBOTPKG_BASE/lib:$ROBOTPKG_BASE/lib//dynamic-graph-plugins:$ROBOTPKG_BASE/lib64
-  export PYTHONPATH=$PYTHONPATH:$ROBOTPKG_BASE/lib/python2.7/site-packages
-  export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$ROBOTPKG_BASE/lib/pkgconfig/
-  export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$ROBOTPKG_BASE/share
-  export CMAKE_PREFIX_PATH=$CMAKE_PREFIX_PATH:$ROBOTPKG_BASE
-  export GAZEBO_MODEL_PATH=$ROBOTPKG_BASE/share/pal_gazebo_worlds/models:$GAZEBO_MODEL_PATH
-  export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:$ROBOTPKG_BASE/lib
+  export PATH=$PATH:$rpkg_path/sbin:$rpkg_path/bin
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$rpkg_path/lib:$rpkg_path/lib//dynamic-graph-plugins:$rpkg_path/lib64
+  export PYTHONPATH=$PYTHONPATH:$rpkg_path/lib/python2.7/site-packages
+  export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$rpkg_path/lib/pkgconfig/
+  export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$rpkg_path/share
+  export CMAKE_PREFIX_PATH=$CMAKE_PREFIX_PATH:$rpkg_path
+  export GAZEBO_MODEL_PATH=$rpkg_path/share/pal_gazebo_worlds/models:$GAZEBO_MODEL_PATH
+  export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:$rpkg_path/lib
   export GAZEBO_RESOURCE_PATH=$ROBOTBPKG_BASE/share/pal_gazebo_worlds:/usr/share/gazebo-9:$GAZEBO_RESOURCE_PATH
-
 fi
