@@ -10,8 +10,14 @@
 pinocchio_pkgconfig_present=0
 id_step=1
 nb_steps=6
+url_for_sot_talos_repos="https://raw.githubusercontent.com/stack-of-tasks/sot-doc/master/config/sot_talos.repos"
+
 usage()
 {
+    echo "Install a catkin workspace to develop in the SoT."
+    echo "  The path to the catking workspace has to be provided."
+    echo "  The file listing the repositories is provided here:"
+    echo "  ${url_for_sot_talos_repos}"
     echo "usage: $0 -p ~/sot_ws "
     echo "   -p: [required] path to SoT catkin workspace"
 }
@@ -127,7 +133,7 @@ get_sot_repos()
 {
     echo "* ${purple}[$id_step/$nb_steps]${std} Get sot_talos.repos"
     cd ${rpkg_path}
-    wget -O sot_talos.repos https://raw.githubusercontent.com/stack-of-tasks/sot-doc/master/config/sot_talos.repos
+    wget -O sot_talos.repos ${url_for_sot_talos_repos}
     id_step=$((id_step+1))
     echo "* ${purple}[$id_step/$nb_steps]${std} Import all repositories (around 800 Mo)"
     vcs import --recursive < sot_talos.repos
@@ -149,6 +155,9 @@ configure_catkin()
     id_step=$((id_step+1))
     echo "catkin config ${catkin_config_args} --"
 }
+
+# Verify which ubuntu is used
+checking_ubuntu_release
 
 # Dealing with parameters
 while [ "$1" != "" ]; do
@@ -182,9 +191,6 @@ if [ -z "$rpkg_path" ]; then
 fi
 
 # Main starts from here
-
-# Verify which ubuntu is used
-checking_ubuntu_release
 
 # Verify if the needed commands are installed
 checking_if_commands_are_installed
