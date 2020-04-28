@@ -10,12 +10,12 @@ Depending on your target you might not be interested in using the full set of so
 \\( RM \\), its current state \\( x \\) and computes a control vector \\(u \\) to make the robot performs actions.
 
 All our controllers are defined as optimization problems. We are using either off-the-shelf solvers or our own solvers, depending of the targeted applications. The free variables are the control vector \\( u \\) to apply to the system. They are constraints which can be of several kinds: the mechanical constraints of the system with the environment, the behavior that we want the robot to follow. A short introduction on how those two constraints can be mathematically formulated can be found 
-in \ref controllers_information . We strongly recommend that you read it if you do not have a good grasp of robot control.
+in \ref b_controllers_information . We strongly recommend that you read it if you do not have a good grasp of robot control.
 
 \section InstallIntro Installation
 
 It is recommended to install the Stack-Of-Tasks from binaries. This is strongly recommended if you are working on one of the robot currently supported: TALOS or Tiago.
-More information are given in the \ref installation_detailed page.
+More information are given in the \ref c_installation_detailed page.
 
 \subsection subsecInstallIntroBin Installing from binaries
 

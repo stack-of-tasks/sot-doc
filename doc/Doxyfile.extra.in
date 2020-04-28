@@ -295,15 +295,16 @@ INPUT                 = @CMAKE_SOURCE_DIR@/doc/main.dox \
                         @CMAKE_SOURCE_DIR@/doc/Overview.md \
                         @CMAKE_SOURCE_DIR@/doc/ControllersFormulation.md \
                         @CMAKE_SOURCE_DIR@/doc/Installation.md \
-                        @CMAKE_SOURCE_DIR@/doc/SettingYourEnvironment.md \                        
+                        @CMAKE_SOURCE_DIR@/doc/SettingYourEnvironment.md \
                         @CMAKE_SOURCE_DIR@/doc/StateRobotpkgBinaries.md \
                         @CMAKE_SOURCE_DIR@/doc/CatkinBuildTools.md \
                         @CMAKE_SOURCE_DIR@/doc/Tutorial_Dyn_Graph_101.md \
                         @CMAKE_SOURCE_DIR@/doc/Tutorial_Whole_Body_Motion.md \
                         @CMAKE_SOURCE_DIR@/doc/Tutorial_Ros_Bridge.md \
                         @CMAKE_SOURCE_DIR@/doc/Citing.md \
-                        @CMAKE_SOURCE_DIR@/doc/Examples.md
-                        
+                        @CMAKE_SOURCE_DIR@/doc/Examples.md \
+                        @CMAKE_SOURCE_DIR@/doc/OtherControlArchitectures.md
+
 # The RECURSIVE tag can be used to turn specify whether or not subdirectories
 # should be searched for input files as well. Possible values are YES and NO.
 # If left blank NO is used.
@@ -610,7 +611,7 @@ EXPAND_ONLY_PREDEF     = YES
 # instead of the = operator.
 
 PREDEFINED             += EIGEN_MAKE_ALIGNED_OPERATOR_NEW \
-                          EIGEN_STRONG_INLINE=inline 
+                          EIGEN_STRONG_INLINE=inline
 
 
 
