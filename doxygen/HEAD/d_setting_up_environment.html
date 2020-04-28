@@ -102,29 +102,40 @@ $(document).ready(function(){initNavTree('d_setting_up_environment.html','');});
 <div class="title">Setting up your environment </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="setting_up_env_shell_file"></a>
-Shell file</h1>
-<p>To setup the environment variables you can use the script <a href="https://github.com/stack-of-tasks/sot-doc/blob/master/bash/setup-opt-testrobotpkgarg.sh">setup-opt-testrobotpkgarg.sh</a></p>
+<div class="textblock"><h1><a class="anchor" id="setting_up_env_var_intro"></a>
+Introduction</h1>
+<p>In order to make the SoT working all the environment variables in section <a class="el" href="d_setting_up_environment.html#setting_up_env_variables">Important environment variables</a> need to be setup appropriatly. They need to be <em>all</em> coherent.</p>
+<p>More precisely the order of the paths in the variables specify the order to search for libraries and plugins. They are important because a computer might have different (and often conflicting) libraries version. They need to be consistent together.</p>
+<p>A script to realize the setup and to be set in your .bashrc file is given in <a class="el" href="d_setting_up_environment.html#setting_up_env_shell_file">Shell file</a></p>
 <h1><a class="anchor" id="setting_up_env_variables"></a>
 Important environment variables</h1>
-<p>This will set the following environment variables according to the argument:</p>
+<p>This will set the following environment variables according to the argument. All of the variables are important and need to be setup correctly. As an example it we assume that you want to specify your environnement towards /opt/openrobots:</p>
 <ul>
 <li>CMAKE_PREFIX_PATH <br />
- This variable specifies the directory where cmake is searching for libraries CMake target. It is also use by ROS to search for executables.</li>
+ This variable specifies the directory where cmake is searching for libraries CMake target. It is also use by ROS to search for executables. For /opt/openrobots as the first directory to search it should be: <pre class="fragment"> CMAKE_PREFIX_PATH=/opt/openrobots:/whatever_was_before
+</pre></li>
 <li>LD_LIBRARY_PATH <br />
- Path to libraries.</li>
+ Path to libraries. <pre class="fragment"> LD_LIBRARY_PATH=/opt/openrobots/lib:/opt/openrobots/lib/dynamic-graph-plugins:/whatever_was_before
+</pre></li>
 <li>PATH <br />
- Path of the binaries.</li>
+ Path of the binaries. <pre class="fragment"> PATH=/opt/openrobots/bin:/whatever_was_before
+</pre></li>
 <li>PKG_CONFIG_PATH <br />
- Paths to find the .pc files describing compilation flags and libraries. This is currently being deprecated for CMake export rules.</li>
+ Paths to find the .pc files describing compilation flags and libraries. This is currently being deprecated for CMake export rules. <pre class="fragment"> PKG_CONFIG_PATH=/opt/openrobots/lib/pkgconfig:/whatever_was_before
+</pre></li>
 <li>PYTHON_PATH <br />
- Paths to find python modules. SoT install modules in site-packages directory (Python convention) instead of dist-packges (Ubuntu convention).</li>
-<li>ROBOTPKG_BASE <br />
- Path where robotpkg is installed.</li>
+ Paths to find python modules. SoT install modules in site-packages directory (Python convention) instead of dist-packges (Ubuntu convention). <pre class="fragment"> PYTHON_PATH=/opt/openrobots/lib/site-package
+</pre></li>
 <li>ROS_PACKAGE_PATH <br />
- Path where ROS packages are installed</li>
+ Path where ROS packages are installed <pre class="fragment"> ROS_PACKAGE_PATH=/opt/openrobots/share:/whatever_was_before
+</pre></li>
+<li>ROBOTPKG_BASE <br />
+ Path where robotpkg is installed. This is not useful if you are not installing robotpkg from source</li>
 </ul>
-<h1><a class="anchor" id="setting_up_env_conf"></a>
+<h1><a class="anchor" id="setting_up_env_shell_file"></a>
+Shell file</h1>
+<p>To setup the environment variables you can use the script <a href="https://github.com/stack-of-tasks/sot-doc/blob/master/bash/setup-opt-testrobotpkgarg.sh">setup-opt-testrobotpkgarg.sh</a> which can be download using: </p><pre class="fragment">wget https://raw.githubusercontent.com/stack-of-tasks/sot-doc/master/bash/setup-opt-testrobotpkgarg.sh
+</pre><h1><a class="anchor" id="setting_up_env_conf"></a>
 Modification of your configuration</h1>
 <p>To use it with the binary packages installed in /opt/openrobots: </p><pre class="fragment">source setup-opt-testrobotpkgarg.sh -p /opt/openrobots -r
 </pre><p>Once you typed this command you can check that the previous variables have the string "/opt/openrobots". The order set the priority.</p>
@@ -134,7 +145,7 @@ Modification of your configuration</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Apr 18 2020 11:40:39 for sot-doc by
+    <li class="footer">Generated on Tue Apr 28 2020 22:40:28 for sot-doc by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

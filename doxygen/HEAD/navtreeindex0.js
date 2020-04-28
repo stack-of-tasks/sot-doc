@@ -20,10 +20,11 @@ var NAVTREEINDEX0 =
 "c_installation_detailed.html#installation_from_source_robotpkg":[1,0,1,0],
 "c_installation_detailed.html#installation_robotpkg":[1,0,0,0],
 "c_installation_detailed.html#installation_robotpkg_status":[1,0,0,1],
-"citelist.html":[6],
+"citelist.html":[7],
 "d_setting_up_environment.html":[1,1],
-"d_setting_up_environment.html#setting_up_env_conf":[1,1,2],
-"d_setting_up_environment.html#setting_up_env_shell_file":[1,1,0],
+"d_setting_up_environment.html#setting_up_env_conf":[1,1,3],
+"d_setting_up_environment.html#setting_up_env_shell_file":[1,1,2],
+"d_setting_up_environment.html#setting_up_env_var_intro":[1,1,0],
 "d_setting_up_environment.html#setting_up_env_variables":[1,1,1],
 "examples_using_sot.html":[3,0],
 "examples_using_sot.html#ex_usage_mpi":[3,0,0],
@@ -82,5 +83,6 @@ var NAVTREEINDEX0 =
 "tutorial_whole_body_motion.html#tutorial_snd_introduction_kinetic":[2,1,0,1],
 "tutorial_whole_body_motion.html#tutorial_snd_introduction_melodic":[2,1,0,0],
 "tutorial_whole_body_motion.html#tutorial_snd_whole_body_motion":[2,1,1],
-"z_citing_the_robot.html":[5]
+"z_citing_the_robot.html":[5],
+"za_other_control_archictures.html":[6]
 };

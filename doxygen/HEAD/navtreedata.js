@@ -26,6 +26,7 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Citing the SoT", "z_citing_the_robot.html", null ],
+    [ "Other control architectures", "za_other_control_archictures.html", null ],
     [ "Bibliography", "citelist.html", null ]
   ] ]
 ];

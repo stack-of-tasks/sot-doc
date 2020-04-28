@@ -54,8 +54,9 @@
     <name>d_setting_up_environment</name>
     <title>Setting up your environment</title>
     <filename>d_setting_up_environment</filename>
-    <docanchor file="d_setting_up_environment" title="Shell file">setting_up_env_shell_file</docanchor>
+    <docanchor file="d_setting_up_environment" title="Introduction">setting_up_env_var_intro</docanchor>
     <docanchor file="d_setting_up_environment" title="Important environment variables">setting_up_env_variables</docanchor>
+    <docanchor file="d_setting_up_environment" title="Shell file">setting_up_env_shell_file</docanchor>
     <docanchor file="d_setting_up_environment" title="Modification of your configuration">setting_up_env_conf</docanchor>
   </compound>
   <compound kind="page">
@@ -135,5 +136,10 @@
     <title>Examples of control infra structure using the SoT</title>
     <filename>examples_using_sot</filename>
     <docanchor file="examples_using_sot" title="Max-Planck-Institute">ex_usage_mpi</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>za_other_control_archictures</name>
+    <title>Other control architectures</title>
+    <filename>za_other_control_archictures</filename>
   </compound>
 </tagfile>

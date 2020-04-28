@@ -12,8 +12,9 @@ var Installation_Generalities =
       ] ]
     ] ],
     [ "Setting up your environment", "d_setting_up_environment.html", [
-      [ "Shell file", "d_setting_up_environment.html#setting_up_env_shell_file", null ],
+      [ "Introduction", "d_setting_up_environment.html#setting_up_env_var_intro", null ],
       [ "Important environment variables", "d_setting_up_environment.html#setting_up_env_variables", null ],
+      [ "Shell file", "d_setting_up_environment.html#setting_up_env_shell_file", null ],
       [ "Modification of your configuration", "d_setting_up_environment.html#setting_up_env_conf", null ]
     ] ],
     [ "Status of the robotpkg binaries", "status_robotpkg_binaries.html", [
