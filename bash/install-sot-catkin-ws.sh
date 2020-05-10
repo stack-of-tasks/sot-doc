@@ -122,6 +122,9 @@ prepare_sot_ws_directory()
         mkdir -p $rpkg_path
         if [ -d $rpkg_path ]; then
             echo "${green}$rpkg_path has been created ${std}"
+        else
+            echo "${red}Unable to create $rpkg_path. Stopping${std}"
+            exit 1
         fi
     else
         echo "${yellow}$rpkg_path already exists${std}"
