@@ -28,7 +28,7 @@ The robot right hand position is publised in a ROS topic:
 This creates an input signal for the ros.rosPublish entity (`romeo_rightHand_position`), as well as the rostopic
 element `/right_gripper`.
 
-Please note that this alone does **NOT** publish anything. In order to publish something, it is hence necessary to a signal to the one created in rosPublish.
+Please note that this alone does **NOT** publish anything. In order to publish something, it is hence necessary to plug a signal to the one created in rosPublish.
 
 
     plug(robot.frames['rightGripper'].position, ros.rosPublish.signal(robot.frames['rightGripper'].name +'_position'))
