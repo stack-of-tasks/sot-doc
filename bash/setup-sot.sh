@@ -64,7 +64,7 @@ if [ -f /etc/lsb-release ]; then
      echo "export DISTRIB_CODENAME="$DISTRIB_CODENAME >> /tmp/local.bash;
      echo "export DISTRIB_RELEASE="$DISTRIB_RELEASE >> /tmp/local.bash;
      echo "export DISTRIB_DESCRIPTION=\""$DISTRIB_DESCRIPTION\" >> /tmp/local.bash;)
-    source /tmp/local.bash
+    . /tmp/local.bash
 fi
 
 if [ $ros_reset -eq 1 ]; then
@@ -72,13 +72,13 @@ if [ $ros_reset -eq 1 ]; then
   # If the release is 12.04 LTS
   if [ $DISTRIB_RELEASE == "12.04" ]; then
     # ROS is set to Hydro
-    source /opt/ros/hydro/setup.bash
+    . /opt/ros/hydro/setup.bash
   fi
 
   # If the release is 14.04 LTS
   if [ $DISTRIB_RELEASE == "14.04" ]; then
     # ROS is set to Indigo
-    source /opt/ros/indigo/setup.bash
+    . /opt/ros/indigo/setup.bash
   fi
 
   # If the release is 16.04 LTS
@@ -88,12 +88,12 @@ if [ $ros_reset -eq 1 ]; then
     export MACHINE_ARCH=x86_64
 
     # ROS is set to Indigo
-    source /opt/ros/kinetic/setup.bash
+    . /opt/ros/kinetic/setup.bash
   fi
 fi
 
 if [ -f /usr/share/gazebo-9/setup.sh ]; then
-    source /usr/share/gazebo-9/setup.sh
+    . /usr/share/gazebo-9/setup.sh
 fi
 
 setting_robotpkg_base ${rpkg_path}
