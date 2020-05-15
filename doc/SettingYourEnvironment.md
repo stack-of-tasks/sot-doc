@@ -55,15 +55,15 @@ As an example it we assume that you want to specify your environnement towards /
 
 \section setting_up_env_shell_file Shell file
 To setup the environment variables you can use the script
-[setup-opt-testrobotpkgarg.sh](https://github.com/stack-of-tasks/sot-doc/blob/master/bash/setup-opt-testrobotpkgarg.sh) which can be download using:
+[setup-sot.sh](https://github.com/stack-of-tasks/sot-doc/blob/master/bash/setup-sot.sh) which can be download using:
 
-    wget https://raw.githubusercontent.com/stack-of-tasks/sot-doc/master/bash/setup-opt-testrobotpkgarg.sh
+    wget https://raw.githubusercontent.com/stack-of-tasks/sot-doc/master/bash/setup-sot.sh
 
 \section setting_up_env_conf Modification of your configuration
 
 To use it with the binary packages installed in /opt/openrobots:
 
-    source setup-opt-testrobotpkgarg.sh -p /opt/openrobots -r
+    source setup-sot.sh -p /opt/openrobots -r
 
 Once you typed this command you can check that the previous variables have the string "/opt/openrobots".
 The order set the priority.
@@ -74,4 +74,4 @@ This equivalent to workspace chaining in ROS.
 It is recommended to handle this with aliases in your .bashrc file.
 You can for instance add the following line to your .bash_aliases
 
-    alias sop="source setup-opt-testrobotpkgarg.sh -p /opt/openrobots -r"
+    alias sop="source setup-sot.sh -p /opt/openrobots -r"

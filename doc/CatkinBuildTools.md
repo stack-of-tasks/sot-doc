@@ -21,8 +21,8 @@ Other options to install the source dependencies are given in \ref memo_preparin
 
 \subsubsection memo_catkin_tools_quick_start_setnv Setup your environment
 
-    source setup-opt-testrobotpkgarg.sh -p /path_to_target_dir -r
-    source setup-opt-testrobotpkgarg.sh -p /path_to_sot_ws/install -r
+    source setup-sot.sh -p /path_to_target_dir -r
+    source setup-sot.sh -p /path_to_sot_ws/install -r
 
 \subsubsection _catkin_tools_quick_create_ws Create your workspace
 
@@ -305,7 +305,7 @@ To chain the workspace you can either follow this tutorial
     http://wiki.ros.org/catkin/Tutorials/workspace_overlaying
 
 with the workspace where all the SoT packages are located, or make an alias calling the script
-[setup-opt-testrobotpkgarg.sh](https://github.com/stack-of-tasks/sot-doc/blob/master/bash/setup-opt-testrobotpkgarg.sh)
+[setup-sot.sh](https://github.com/stack-of-tasks/sot-doc/blob/master/bash/setup-sot.sh)
 
-    source setup-opt-testrobotpkgarg.sh -p /path_to_target_dir -r
-    source setup-opt-testrobotpkgarg.sh -p /path_to_sot_ws/install -r
+    source setup-sot.sh -p /path_to_target_dir -r
+    source setup-sot.sh -p /path_to_sot_ws/install -r
