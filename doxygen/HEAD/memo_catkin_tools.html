@@ -116,8 +116,8 @@ chmod +x ./install-dep-thru-rpkg.sh
 <p>Other options to install the source dependencies are given in <a class="el" href="memo_catkin_tools.html#memo_preparing_environment">Installing dependencies</a>.</p>
 <h3><a class="anchor" id="memo_catkin_tools_quick_start_setnv"></a>
 Setup your environment</h3>
-<pre class="fragment">source setup-opt-testrobotpkgarg.sh -p /path_to_target_dir -r
-source setup-opt-testrobotpkgarg.sh -p /path_to_sot_ws/install -r
+<pre class="fragment">source setup-sot.sh -p /path_to_target_dir -r
+source setup-sot.sh -p /path_to_sot_ws/install -r
 </pre><h3><a class="anchor" id="_catkin_tools_quick_create_ws"></a>
 Create your workspace</h3>
 <p>Once this is done, to create your SoT workspace using the file <a href="https://github.com/stack-of-tasks/sot-doc/blob/master/config/sot_talos.repos">sot_talos.repos</a>: </p><pre class="fragment">wget -O install-sot-catkin-ws.sh https://raw.githubusercontent.com/stack-of-tasks/sot-doc/master/bash/install-sot-catkin-ws.sh
@@ -300,13 +300,13 @@ Robotpkg helpers repository</h2>
 <h2><a class="anchor" id="subsec_preparing_env_chaining_ws"></a>
 Chaining workspaces</h2>
 <p>To chain the workspace you can either follow this tutorial </p><pre class="fragment">http://wiki.ros.org/catkin/Tutorials/workspace_overlaying
-</pre><p>with the workspace where all the SoT packages are located, or make an alias calling the script <a href="https://github.com/stack-of-tasks/sot-doc/blob/master/bash/setup-opt-testrobotpkgarg.sh">setup-opt-testrobotpkgarg.sh</a> </p><pre class="fragment">source setup-opt-testrobotpkgarg.sh -p /path_to_target_dir -r
-source setup-opt-testrobotpkgarg.sh -p /path_to_sot_ws/install -r</pre> </div></div><!-- contents -->
+</pre><p>with the workspace where all the SoT packages are located, or make an alias calling the script <a href="https://github.com/stack-of-tasks/sot-doc/blob/master/bash/setup-sot.sh">setup-sot.sh</a> </p><pre class="fragment">source setup-sot.sh -p /path_to_target_dir -r
+source setup-sot.sh -p /path_to_sot_ws/install -r</pre> </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon May 11 2020 12:27:56 for sot-doc by
+    <li class="footer">Generated on Fri May 15 2020 04:50:27 for sot-doc by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>
