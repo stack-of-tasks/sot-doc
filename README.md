@@ -25,7 +25,8 @@ Script and configuration file for the installation and the setup of the Stack-Of
 Apart setup-sot.sh when you install through robotpkg.sh the files are only
 used when you want to develop.
 
-# Local generation
+# Generate locally the documentation
+To generate the documentation please follow the instructions:
 
     mkdir build
     cd build
