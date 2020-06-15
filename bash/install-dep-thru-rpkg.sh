@@ -61,7 +61,9 @@ generate_json_file()
     echo "    \"pyrene-motions\"," >> arch_test_sot_only.json
     echo "    \"pinocchio\",\"py-pinocchio\"," >> arch_test_sot_only.json
     echo "    \"eiquadprog\",\"simple-humanoid-description\"," >> arch_test_sot_only.json
-    echo "    \"parametric-curves\",\"talos-simulation\"]">> arch_test_sot_only.json
+    echo "    \"parametric-curves\",\"talos-simulation\"," >> arch_test_sot_only.json
+    echo "    \"eigen-quadprog\",\"example-robot-data\"," >> arch_test_sot_only.json
+    echo "    \"ddp-actuator-solver\",\"py-example-robot-data\"]" >> arch_test_sot_only.json
     echo "}" >> arch_test_sot_only.json
 }
 
