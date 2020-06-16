@@ -1,4 +1,4 @@
-# Release of a SOT package
+# Release of a SOT package {#tutorial_release_sot_packages}
 
 /section Tutorial_introduction Introduction
 
