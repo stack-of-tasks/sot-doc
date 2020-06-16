@@ -8,9 +8,79 @@ This tutorial will help you to realease any new SOT packages and to maintain alr
 
 Make sure that the .gitmodules file is clean without unmet path target. Because it can result in errors during the release.
 
-This time clone your upstream repository on the branch were you developed your code
+Clone your upstream repository locally on the branch were you developed your code
 
-git clone https://github.com/......
+git clone --recursive-submodules --branch=<your_branch> https://github.com/<name-of-your-account>/<name-of-your-package>
+cd <name-of-your-package>
+
+/subsection changelog Generate Changelog (Optional)
+
+If you want you can generate a changelog to keep track of the changes :
+
+catkin_generate_changelog --all
+
+git add .
+git commit -am "Update Changelog"
+
+/subsection prepare_release Preparation for the release 
+
+Then run :
+
+catkin_prepare_release --tag-prefix=v
+
+Enter your github login and password when asked to (If you have a two factor authentification please refer to : http://wiki.ros.org/bloom/Tutorials/GithubManualAuthorization )
+
+/subsection release_repository Create a github repository for the release
+
+For the first release you will need to create a github repository with the name : <name-of-your-package>-release
+Check the Create README.md button when creating it so that the first commit is created.
+
+Clone this github repository on your local machine :
+
+cd #go to your home directory
+git clone https://github.com/<name-of-your-account>/<name-of-your-package>-release
+
+Then create a tracks.yaml file inside the repository with this form : https://github.com/ipab-slmc/eigenpy_catkin-release/blob/master/tracks.yaml
+
+Then push it into the github repository.
+
+/subsection release Releasing you package
+
+Go where you cloned your release repository then run
+
+cd
+# Replace <ros_distro> with the ROS distribution, e.g. indigo; melodic
+bloom-release --rosdistro <ros_distro> --track <ros_distro> <name-of-your-package-release>
+or
+bloom-release --rosdistro <ros_distro> --track <ros_distro> <name-of-your-package-release> --edit
+If you want to edit the tracks.yaml file (ref : https://wiki.ros.org/bloom/Tutorials/FirstTimeRelease#Releasing_Your_Packages )
+
+Normally you will have this error : 
+```
+Specified repository 'dynamic-graph-release' is not in the distribution file located at 'https://raw.githubusercontent.com/ros/rosdistro/master/melodic/distribution.yaml'
+Could not determine release repository url for repository 'dynamic-graph-release' of distro 'melodic'
+You can continue the release process by manually specifying the location of the RELEASE repository.
+To be clear this is the url of the RELEASE repository not the upstream repository.
+For release repositories on GitHub, you should provide the `https://` url which should end in `.git`.
+Here is the url for a typical release repository on GitHub: https://github.com/ros-gbp/rviz-release.git
+==> Looking for a release of this repository in a different distribution...
+No reasonable default release repository url could be determined from previous releases.
+Release repository url [press enter to abort]:
+```
+
+This is ok because your package is not yet on the buildfarm
+
+You will have to enter https://github.com/<name-of-your-account>/<name-of-your-package>-release.git when asked to. Don't forget the .git at the end.
+
+You will be asked again multiple time to enter your login and password for your release repository to push different branches.
+
+At the end it should generate a pull request to add your package to the buildfarm.
+
+/section release Release a package already on the buildfarm
+
+Clone your upstream repository on the branch were you developed your code
+
+git clone --recursive-submodules --branch=<your_branch> https://github.com/<name-of-your-account>/<name-of-your-package>
 cd <name-of-your-package>
 
 /subsection changelog Generate Changelog (Optional)
@@ -25,32 +95,21 @@ git commit -am "Update Changelog"
 
 Then run :
 
-catkin_prepare_release
-cd
+catkin_prepare_release --tag-prefix=v
 
-Enter your github login and password when asked to (If you have a two factor authentification please refer to : )
-
-/subsection release_repository Create a github repository for the release
-
-For the first release you will need to create a github repository with the name : <name-of-your-package>-release
-Check the Create README.md button when creating it so that the first commit is created.
-
-Clone this github repository on your local machine :
-
-git clone https://github.com/......
-
-Then create a tracks.yaml file inside the repository with this form :
-
-Then push it into the github repository.
+Enter your github login and password when asked to (If you have a two factor authentification please refer to : http://wiki.ros.org/bloom/Tutorials/GithubManualAuthorization )
 
 /subsection release Releasing you package
 
-Go where you cloned your release repository then run
+Run :
 
-# Replace <ros_distro> with the ROS distribution, e.g. indigo
-bloom-release --rosdistro <ros_distro> --track <ros_distro> <name-of-your-package-release> --edit
+# Replace <ros_distro> with the ROS distribution, e.g. indigo; melodic
+# Replace <name-of-your-package> with the name used in the ROS distro file
+bloom-release <name-of-your-package> --rosdistro <ros_distro>
 
-/section release Release a package already on the buildfarm
+You will be asked again multiple time to enter your login and password for your release repository to push different branches.
+
+At the end it should generate a pull request to update your package on the buildfarm.
 
 /section prerelease Prerelease on your local machine to test for issues
 
