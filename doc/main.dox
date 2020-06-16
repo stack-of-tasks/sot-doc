@@ -10,6 +10,7 @@
     - \subpage tutorial_dyn_graph_101
     - \subpage tutorial_whole_body_motion
     - \subpage tutorial_ros_bridge
+    - \subpage Tutorial_Release_SOT_Packages
 */
 
 
