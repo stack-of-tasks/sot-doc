@@ -5,6 +5,23 @@
 This memo explains how to create and handle a super build (set of packages) workspace of the SoT with catkin tools.
 catkin tools should not confused with catkin_make. They can be installed independently from ROS.
 
+Two solutions are possible:
+
+ * Installing the SoT third party dependency from robotpkg binaries.
+ * Installing the SoT third party dependency from robotpkg sources.
+
+The first solution is the fastest and is recommended to stay up-to-date with the core development team.
+The disadvantage is that the software environment might be unstable if the binary packages are updated continously.
+
+To have a stable environment it is possible to freeze the binary packages coming from robotpkg (by imposing the version)
+or to use the second solution.
+
+Practically it is possible to have both the binary packages in ```/opt/openrobots```
+to follow the latest development and to have the source packages in ```/home/user/own_stable_install```
+develop your own functionnalities.
+
+The last solution is to use docker.
+
 \subsection memo_catkin_tools_quick_start Quick start
 
 \subsubsection memo_catkin_tools_quick_start_required Required packages
