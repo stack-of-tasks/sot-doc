@@ -20,7 +20,7 @@ var NAVTREEINDEX0 =
 "c_installation_detailed.html#installation_from_source_robotpkg":[1,0,1,0],
 "c_installation_detailed.html#installation_robotpkg":[1,0,0,0],
 "c_installation_detailed.html#installation_robotpkg_status":[1,0,0,1],
-"citelist.html":[7],
+"citelist.html":[8],
 "d_setting_up_environment.html":[1,1],
 "d_setting_up_environment.html#setting_up_env_conf":[1,1,3],
 "d_setting_up_environment.html#setting_up_env_shell_file":[1,1,2],
@@ -29,8 +29,8 @@ var NAVTREEINDEX0 =
 "examples_using_sot.html":[3,0],
 "examples_using_sot.html#ex_usage_mpi":[3,0,0],
 "index.html":[],
+"md_doc_SciencePapers.html":[6],
 "memo_catkin_tools.html":[1,3],
-"memo_catkin_tools.html#_catkin_tools_quick_create_ws":[1,3,0,0,2],
 "memo_catkin_tools.html#memo_catkin_tools_clean_all":[1,3,2,2],
 "memo_catkin_tools.html#memo_catkin_tools_compiling":[1,3,2],
 "memo_catkin_tools.html#memo_catkin_tools_compiling_a_pkg":[1,3,2,1,1],
@@ -42,8 +42,7 @@ var NAVTREEINDEX0 =
 "memo_catkin_tools.html#memo_catkin_tools_compute_coverage":[1,3,2,4],
 "memo_catkin_tools.html#memo_catkin_tools_intro":[1,3,0],
 "memo_catkin_tools.html#memo_catkin_tools_quick_start":[1,3,0,0],
-"memo_catkin_tools.html#memo_catkin_tools_quick_start_depends":[1,3,0,0,0],
-"memo_catkin_tools.html#memo_catkin_tools_quick_start_setnv":[1,3,0,0,1],
+"memo_catkin_tools.html#memo_catkin_tools_quick_start_required":[1,3,0,0,0],
 "memo_catkin_tools.html#memo_catkin_tools_run_tests":[1,3,2,3],
 "memo_catkin_tools.html#memo_catkin_tools_vcs":[1,3,1],
 "memo_catkin_tools.html#memo_catkin_tools_vcs_checkingout":[1,3,1,0],
@@ -84,5 +83,5 @@ var NAVTREEINDEX0 =
 "tutorial_whole_body_motion.html#tutorial_snd_introduction_melodic":[2,1,0,0],
 "tutorial_whole_body_motion.html#tutorial_snd_whole_body_motion":[2,1,1],
 "z_citing_the_robot.html":[5],
-"za_other_control_archictures.html":[6]
+"za_other_control_archictures.html":[7]
 };

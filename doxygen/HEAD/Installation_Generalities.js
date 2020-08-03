@@ -27,9 +27,7 @@ var Installation_Generalities =
     [ "Using catkin tools and vcs for the SoT", "memo_catkin_tools.html", [
       [ "Introduction", "memo_catkin_tools.html#memo_catkin_tools_intro", [
         [ "Quick start", "memo_catkin_tools.html#memo_catkin_tools_quick_start", [
-          [ "Install dependencies", "memo_catkin_tools.html#memo_catkin_tools_quick_start_depends", null ],
-          [ "Setup your environment", "memo_catkin_tools.html#memo_catkin_tools_quick_start_setnv", null ],
-          [ "Create your workspace", "memo_catkin_tools.html#_catkin_tools_quick_create_ws", null ]
+          [ "Required packages", "memo_catkin_tools.html#memo_catkin_tools_quick_start_required", null ]
         ] ],
         [ "Quick start explanations", "memo_catkin_tools.html#memto_catkin_tools_quick_start_explanations", null ]
       ] ],
