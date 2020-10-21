@@ -9,4 +9,4 @@
  https://github.com/machines-in-motion/dg_tutorial_with_turtlesim
  
  * Documentation of the dynamic_graph_manager
- https://machines-in-motion.github.io/code_documentation/dynamic_graph_manager/
+ https://machines-in-motion.github.io/code_documentation/dynamic_graph_manager/docs/doxygen/html/index.html
