@@ -58,6 +58,7 @@ generate_json_file()
     echo " \"rc_pkgs\": {}," >> arch_test_sot_only.json
     echo " \"ssh_git_openrobots\": false, " >> arch_test_sot_only.json
     echo " \"targetpkgs\": [\"pal-msgs\",\"py-eigenpy\"," >> arch_test_sot_only.json
+    echo "    \"example-robot-data\"," >> arch_test_sot_only.json
     echo "    \"pyrene-motions\"," >> arch_test_sot_only.json
     echo "    \"pinocchio\",\"py-pinocchio\"," >> arch_test_sot_only.json
     echo "    \"eiquadprog\",\"simple-humanoid-description\"," >> arch_test_sot_only.json
