@@ -1,8 +1,8 @@
-# Other control architectures {#za_other_control_archictures}
+# Other control architectures {#za_other_control_architectures}
 
   * iTasc: Automatic code generation based on the specification of constraints and tasks.
   https://www.orocos.org/wiki/orocos/itasc-wiki
-  * IHMC: https://ihmc-open-robotics-software/ihmc-whole-body-controller/src/
+  * IHMC: https://github.com/ihmcrobotics/ihmc-open-robotics-software
   * https://github.com/fkanehiro/hrpsys-base from the Humanoid Research Group (AIST) using a graph of controllers based on OpenRTM
   * OpenSoT https://github.com/EnricoMingo/OpenSoT-superbuild
   * MC_RTC:  https://jrl-umi3218.github.io/mc_rtc/
