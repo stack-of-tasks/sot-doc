@@ -1,4 +1,4 @@
-# Release of a SOT package on ROS {#tutorial_release_sot_packages}
+# Release of a SoT package on ROS {#tutorial_release_sot_packages}
 
 \section Tutorial_introduction Introduction
 
