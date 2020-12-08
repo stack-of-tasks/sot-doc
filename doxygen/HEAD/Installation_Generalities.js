@@ -56,5 +56,27 @@ var Installation_Generalities =
         [ "Robotpkg helpers repository", "memo_catkin_tools.html#subsec_preparing_env_from_rpkg_helpers", null ],
         [ "Chaining workspaces", "memo_catkin_tools.html#subsec_preparing_env_chaining_ws", null ]
       ] ]
+    ] ],
+    [ "Using colcon tools and vcs for the SoT", "memo_colcon_tools.html", [
+      [ "Introduction", "memo_colcon_tools.html#memo_colcon_tools_intro", [
+        [ "Quick start", "memo_colcon_tools.html#memo_colcon_tools_quick_start", [
+          [ "Install third party dependencies of the SoT packages", "memo_colcon_tools.html#memo_colcon_tools_quick_start_depends", null ],
+          [ "Setup your environment", "memo_colcon_tools.html#memo_colcon_tools_quick_start_setnv", null ],
+          [ "Create your workspace", "memo_colcon_tools.html#memo_colcon_tools_quick_create_ws", null ]
+        ] ]
+      ] ],
+      [ "Handling the repositories (VCS)", "memo_colcon_tools.html#memo_colcon_tools_vcs", null ],
+      [ "Compiling and testing the packages (catkin)", "memo_colcon_tools.html#memo_colcon_tools_compiling", [
+        [ "Setting the cmake args", "memo_colcon_tools.html#memo_colcon_tools_compiling_settings", null ],
+        [ "Compiling", "memo_colcon_tools.html#memo_colcon_tools_compiling_compiling", [
+          [ "Compiling everything", "memo_colcon_tools.html#memo_colcon_tools_compiling_all", null ],
+          [ "Compiling a specific package with its dependencies", "memo_colcon_tools.html#memo_colcon_tools_compiling_a_pkg", null ],
+          [ "Compiling a specific package without its dependencies", "memo_colcon_tools.html#memo_colcon_tools_compiling_a_pkg_nodeps", null ],
+          [ "Generating the documentation", "memo_colcon_tools.html#memo_colcon_tools_compiling_a_pkg_doc", null ]
+        ] ],
+        [ "Clean all the build part", "memo_colcon_tools.html#memo_colcon_tools_clean_all", null ],
+        [ "Running tests", "memo_colcon_tools.html#memo_colcon_tools_run_tests", null ],
+        [ "Computing coverage", "memo_colcon_tools.html#memo_colcon_tools_compute_coverage", null ]
+      ] ]
     ] ]
 ];

@@ -84,7 +84,7 @@
     <docanchor file="memo_catkin_tools.html" title="Install dependencies">memo_catkin_tools_quick_start_depends</docanchor>
     <docanchor file="memo_catkin_tools.html" title="Setup your environment">memo_catkin_tools_quick_start_setnv</docanchor>
     <docanchor file="memo_catkin_tools.html" title="Create your workspace">_catkin_tools_quick_create_ws</docanchor>
-    <docanchor file="memo_catkin_tools.html" title="Quick start explanations">memto_catkin_tools_quick_start_explanations</docanchor>
+    <docanchor file="memo_colcon_tools.html" title="Quick start explanations">memto_catkin_tools_quick_start_explanations</docanchor>
     <docanchor file="memo_catkin_tools.html" title="Handling the repositories (VCS)">memo_catkin_tools_vcs</docanchor>
     <docanchor file="memo_catkin_tools.html" title="Checking out the SoT infra-structure">memo_catkin_tools_vcs_checkingout</docanchor>
     <docanchor file="memo_catkin_tools.html" title="Getting the current status of the repos">memo_catkin_tools_vcs_status</docanchor>
@@ -103,6 +103,28 @@
     <docanchor file="memo_catkin_tools.html" title="Robotpkg Only">subsec_preparing_env_from_rpkg_only</docanchor>
     <docanchor file="memo_catkin_tools.html" title="Robotpkg helpers repository">subsec_preparing_env_from_rpkg_helpers</docanchor>
     <docanchor file="memo_catkin_tools.html" title="Chaining workspaces">subsec_preparing_env_chaining_ws</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>memo_colcon_tools</name>
+    <title>Using colcon tools and vcs for the SoT</title>
+    <filename>memo_colcon_tools.html</filename>
+    <docanchor file="memo_colcon_tools.html">md_doc_ColconBuildTools</docanchor>
+    <docanchor file="memo_colcon_tools.html" title="Introduction">memo_colcon_tools_intro</docanchor>
+    <docanchor file="memo_colcon_tools.html" title="Quick start">memo_colcon_tools_quick_start</docanchor>
+    <docanchor file="memo_colcon_tools.html" title="Install third party dependencies of the SoT packages">memo_colcon_tools_quick_start_depends</docanchor>
+    <docanchor file="memo_colcon_tools.html" title="Setup your environment">memo_colcon_tools_quick_start_setnv</docanchor>
+    <docanchor file="memo_colcon_tools.html" title="Create your workspace">memo_colcon_tools_quick_create_ws</docanchor>
+    <docanchor file="memo_colcon_tools.html" title="Handling the repositories (VCS)">memo_colcon_tools_vcs</docanchor>
+    <docanchor file="memo_colcon_tools.html" title="Compiling and testing the packages (catkin)">memo_colcon_tools_compiling</docanchor>
+    <docanchor file="memo_colcon_tools.html" title="Setting the cmake args">memo_colcon_tools_compiling_settings</docanchor>
+    <docanchor file="memo_colcon_tools.html" title="Compiling">memo_colcon_tools_compiling_compiling</docanchor>
+    <docanchor file="memo_colcon_tools.html" title="Compiling everything">memo_colcon_tools_compiling_all</docanchor>
+    <docanchor file="memo_colcon_tools.html" title="Compiling a specific package with its dependencies">memo_colcon_tools_compiling_a_pkg</docanchor>
+    <docanchor file="memo_colcon_tools.html" title="Compiling a specific package without its dependencies">memo_colcon_tools_compiling_a_pkg_nodeps</docanchor>
+    <docanchor file="memo_colcon_tools.html" title="Generating the documentation">memo_colcon_tools_compiling_a_pkg_doc</docanchor>
+    <docanchor file="memo_colcon_tools.html" title="Clean all the build part">memo_colcon_tools_clean_all</docanchor>
+    <docanchor file="memo_colcon_tools.html" title="Running tests">memo_colcon_tools_run_tests</docanchor>
+    <docanchor file="memo_colcon_tools.html" title="Computing coverage">memo_colcon_tools_compute_coverage</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_dyn_graph_101</name>
