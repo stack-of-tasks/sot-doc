@@ -1,5 +1,7 @@
 # Using colcon tools and vcs for the SoT {#memo_colcon_tools}
 
+Colcon is the preferred way to compile the SoT as it is shipped with the newest ROS releases and available on several non Linux platforms.
+
 \section memo_colcon_tools_intro Introduction
 
 This memo explains how to create and handle a super build (set of packages) workspace of the SoT with [colcon](https://colcon.readthedocs.io/en/released/) tools.
