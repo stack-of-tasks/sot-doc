@@ -134,6 +134,8 @@ Copy this code inside the bloom file. For example:
         "oauth_token": "295a7188fbfc36f9esdsdsdqssjd21s2d1"
     }
 
+If you have a two-factor authentication enabled follow this tutorial (Step 2) : http://wiki.ros.org/bloom/Tutorials/GithubManualAuthorization
+
 Make sure that the .gitmodules file is clean without unmet path target. Because it can result in errors during the release.
 
 \subsection release_repository Create a github repository for the release
@@ -184,6 +186,7 @@ Make sure to update:
     # Replace <ros_distro> with the ROS distribution, e.g. melodic; noetic
     # Replace <package-name> with the name used in the ROS distro file
     bloom-release --rosdistro <ros_distro> --track <ros_distro> <package-name>
+
 or
 
     bloom-release --rosdistro <ros_distro> --track <ros_distro> <package-name> --edit
@@ -212,9 +215,50 @@ Don't forget the .git at the end.
 
 Enter the login and password for the release repository to push different branches.
 
-At the end it should generate a pull request to add the package to the buildfarm.
+Then respond y in order to add information:
 
-If not, make sure to have a ~/.config/bloom well initiated or follow this tutorial if you have two-factor authentication enabled : http://wiki.ros.org/bloom/Tutorials/GithubManualAuthorization
+- For documentation on the package:
+
+        VCS Type must be one of git, svn, hg, or bzr.
+        VCS type: git
+        VCS url: https://github.com/stack-of-tasks/<package-name>.git
+        VCS version must be a branch, tag, or commit, e.g. master or 0.1.0
+        VCS version: devel
+
+- For source entry on the package:
+
+        VCS Type must be one of git, svn, hg, or bzr.
+        VCS type: git
+        VCS url: https://github.com/stack-of-tasks/<package-name>.git
+        VCS version must be a branch, tag, or commit, e.g. master or 0.1.0
+        VCS version: devel
+
+- For testing and maintenance statue
+
+        Would you like to turn on pull request testing? [y/N]? n
+        Would you like to add a maintenance status for this repository? [Y/n]? y  
+        Please enter a maintenance status.
+        Valid maintenance statuses:
+        - developed: active development is in progress
+        - maintained: no new development, but bug fixes and pull requests are addressed
+        - unmaintained: looking for new maintainer, bug fixes and pull requests will not be addressed
+        - end-of-life: should not be used, will disappear at some point
+        Status: maintained 
+
+Then at the end it should ask to generate a pull request to add the package to the buildfarm.
+
+    Continue [Y/n]? y
+
+If there is an error at this stage, make sure to have a ~/.config/bloom well initiated or follow this tutorial if you have two-factor authentication enabled : http://wiki.ros.org/bloom/Tutorials/GithubManualAuthorization
+
+or if the error is :
+
+     ! [remote rejected]     bloom-sot-core-0 -> bloom-sot-core-0 (refusing to allow a Personal   Access Token to create or update workflow `.github/workflows/build_test.yaml` without `workflow`   scope)
+    error: failed to push some refs to 'https://678b1f245c644b91864fd46c9732368c0ab93f0e:x-oauth-   basic@github.com/nim65s/rosdistro.git'
+    Failed to open pull request: CalledProcessError - Command 'git push https://   678b1f245c644b91864fd46c9732368c0ab93f0e:x-oauth-basic@github.com/nim65s/rosdistro.git bloom-sot-   core-0' returned non-zero exit status 1
+
+Create another token with workflow enabled.
+
 
 \section maintained Maintain packages already on the buildfarm
 
