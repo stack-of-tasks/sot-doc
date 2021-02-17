@@ -11,6 +11,7 @@
     - \subpage tutorial_dyn_graph_101
     - \subpage tutorial_whole_body_motion
     - \subpage tutorial_ros_bridge
+    - \subpage tutorial_release_sot_packages
 */
 
 
