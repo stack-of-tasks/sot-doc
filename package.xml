@@ -2,7 +2,7 @@
 <package>
 
   <name>sot-doc</name>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
   <description>
       Documentation entry point for the Stack-Of-Tasks
   </description>
