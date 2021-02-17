@@ -298,11 +298,13 @@ INPUT                 = @CMAKE_SOURCE_DIR@/doc/main.dox \
                         @CMAKE_SOURCE_DIR@/doc/SettingYourEnvironment.md \
                         @CMAKE_SOURCE_DIR@/doc/StateRobotpkgBinaries.md \
                         @CMAKE_SOURCE_DIR@/doc/CatkinBuildTools.md \
+                        @CMAKE_SOURCE_DIR@/doc/ColconBuildTools.md \
                         @CMAKE_SOURCE_DIR@/doc/Tutorial_Dyn_Graph_101.md \
                         @CMAKE_SOURCE_DIR@/doc/Tutorial_Whole_Body_Motion.md \
                         @CMAKE_SOURCE_DIR@/doc/Tutorial_Ros_Bridge.md \
                         @CMAKE_SOURCE_DIR@/doc/Tutorial_Release_SOT_Packages.md \
                         @CMAKE_SOURCE_DIR@/doc/Citing.md \
+                        @CMAKE_SOURCE_DIR@/doc/SciencePapers.md \
                         @CMAKE_SOURCE_DIR@/doc/Examples.md \
                         @CMAKE_SOURCE_DIR@/doc/OtherControlArchitectures.md
 
@@ -628,7 +630,7 @@ EXPAND_AS_DEFINED      =
 # contain include files that are not input files but should be processed by
 # the preprocessor.
 
-INCLUDE_PATH          = @PROJECT_SOURCE_DIR@/src
+INCLUDE_PATH          = @PROJECT_SOURCE_DIR@/doc/
 
 #---------------------------------------------------------------------------
 # Configuration::additions related to external references

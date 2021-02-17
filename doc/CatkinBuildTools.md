@@ -5,11 +5,43 @@
 This memo explains how to create and handle a super build (set of packages) workspace of the SoT with catkin tools.
 catkin tools should not confused with catkin_make. They can be installed independently from ROS.
 
+Two solutions are possible:
+
+ * Installing the SoT third party dependency from robotpkg binaries.
+ * Installing the SoT third party dependency from robotpkg sources.
+
+The first solution is the fastest and is recommended to stay up-to-date with the core development team.
+The disadvantage is that the software environment might be unstable if the binary packages are updated continously.
+
+To have a stable environment it is possible to freeze the binary packages coming from robotpkg (by imposing the version)
+or to use the second solution.
+
+Practically it is possible to have both the binary packages in ```/opt/openrobots```
+to follow the latest development and to have the source packages in ```/home/user/own_stable_install```
+develop your own functionnalities.
+
+The last solution is to use docker.
+
 \subsection memo_catkin_tools_quick_start Quick start
+
+\subsubsection memo_catkin_tools_quick_start_required Required packages
+
+
+Running the following script will install the necessary SoT software dependency, but first you will need a few packages to be able to run it. To install them, run :  
+    
+    sudo apt install ccache libncurses5-dev pax texlive-latex-extra doxygen assimp-utils python3-notify2 python3-lark-parser
+
+Some ros packages are required as well. For ros melodic you can run:   
+
+    sudo apt install ros-melodic-octomap ros-melodic-orocos-kinematics-dynamics ros-melodic-four-wheel-steering-msgs ros-melodic-urdf-geometry-parser
+
+For kinetic, run:
+
+    sudo apt install ros-kinetic-octomap ros-kinetic-orocos-kinematics-dynamics ros-kinetic-four-wheel-steering-msgs ros-kinetic-urdf-geometry-parser
 
 \subsubsection memo_catkin_tools_quick_start_depends Install dependencies
 
-To install the necessary SoT software dependency in '''/path_to_target_dir``` you can simply try:
+To install the necessary SoT software dependency in ```/path_to_target_dir``` you can simply try:
 
     wget -O install-dep-thru-rpkg.sh https://raw.githubusercontent.com/stack-of-tasks/sot-doc/master/bash/install-dep-thru-rpkg.sh
     chmod +x ./install-dep-thru-rpkg.sh
@@ -26,7 +58,11 @@ Other options to install the source dependencies are given in \ref memo_preparin
 
 \subsubsection _catkin_tools_quick_create_ws Create your workspace
 
-Once this is done, to create your SoT workspace using the file [sot_talos.repos](https://github.com/stack-of-tasks/sot-doc/blob/master/config/sot_talos.repos):
+You will then need some tools: one for version control, the other for your workspace  
+
+    sudo apt install python3-vcstool python3-catkin-tools
+
+Once this is done,to create your SoT workspace using the file [sot_talos.repos](https://github.com/stack-of-tasks/sot-doc/blob/master/config/sot_talos.repos):
 
     wget -O install-sot-catkin-ws.sh https://raw.githubusercontent.com/stack-of-tasks/sot-doc/master/bash/install-sot-catkin-ws.sh
     chmod +x ./install-sot-catkin-ws.sh
